@@ -72,6 +72,7 @@
   $('#ssan').on('focus', function () {
       $('.resou').show();
       $('.zjss').show();
+
       $('#zjsscbg').css({
           "border": "1px solid #bfbfbf",
           "border-bottom": " none"
@@ -80,13 +81,13 @@
       $('#ssjlk-1-xs').show()
       $(".zjss-zjyc").show()
   })
-  $('#ssan').on('blur', function () {
+
+  $('.ssjlk').on('mouseleave', function () {
       $('.resou').hide();
       $('.zjss').hide();
       $('#zjsscbg').css({
           "border": "none"
       });
-      $('#ssan').val("英雄联盟")
       $('#ssjlk-1-xs').hide()
       $(".zjss-zjyc").hide()
   })
@@ -99,32 +100,29 @@
               return
           };
           if ($('#zjsscbg').children().length == 0) {
-              $('.zjss-1').show();
-              $('.zjss-2').show();
+              $('.zjss-zjyc').show();
           };
 
-          $('#zjsscbg').prepend(`
-        <li>${$('#ssan').val()}<img src="./img/del.png" alt=""></li>
+          $('#zjsscbg').append(`
 
-        <li><a href='#'>${$('#ssan').val()}</a><i></i></li>
-        `);
+
+          <li class="on"><a class="active" href='#'>${$('#ssan').val()}</a><i class='scdbjsn'></i></li>
+`);
           $('#ssan').val('');
 
-          $('#zjsscbg>i').on('click', (e) => {
+          $('.scdbjsn ').on('click', (e) => {
               $(e.target).parent().remove();
 
               if ($('#zjsscbg').children().length == 0) {
-                  $('.zjss-1').hide();
-                  $('.zjss-2').hide();
+                  $('.zjss-zjyc').hide();
+
               };
           });
 
       });
 
-      $('.zjss-1').on('click', () => {
-          $('#zjsscbg').children().remove();
-          $('.zjss-1').hide();
-          $('.zjss-2').hide();
+      $('.zjss-2').on('click', () => {
+          $('.zjss-zjyc').siblings().remove();
+          $('.zjss-zjyc').hide();
       });
-
   });
