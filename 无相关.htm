@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            border: 0;
+            vertical-align: middle;
+            float: left;
+        }
+
+        #searchbox {
+            width: 300px;
+            height: 50px;
+            background: #fff;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        #inpt {
+            width: 240px;
+            height: 50px;
+            outline: none;
+            text-indent: 10px;
+        }
+
+        #btn {
+            width: 60px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        /* 历史记录框 */
+        #historybox {
+            width: 280px;
+            padding: 10px 10px 50px;
+            border: 1px solid #ccc;
+            position: absolute;
+            top: 50px;
+            left: -1px;
+            /* 隐藏 */
+            display: none;
+        }
+
+        #historybox h3 {
+            margin-bottom: 10px;
+        }
+
+        #list {
+            list-style: none;
+        }
+
+        #list .on {
+            float: left;
+            border: 1px solid #ccc;
+            background: #aaa;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 2px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #list #qc .active {
+            color: #fff;
+            text-decoration: none;
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="qc"></div>
+    <form id="hisform">
+        <div id="searchbox">
+            <input id="inpt" type="text" autocomplete="off" />
+            <input id="btn" type="button" value="搜索" />
+            <div id="historybox">
+                <h3>搜索记录:</h3>
+                //用于保存记录信息
+                <ul id="list">
+                </ul>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="./js/lib/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        let max_history = 7; // 存储最大历史数据
+        // 鼠标移入事件
+        $('#inpt').on('focus', function () {
+            $('inpt').val = '';
+            let data = localStorage.getItem('data'); //从本地存储中读取数据
+            if (!data) {
+                $('#historybox').css('display', 'none');
+            } else {
+                $('#historybox').css('display', 'block');
+                historydata(JSON.parse(data)); // 渲染数据
+            }
+        })
+        // 鼠标移出事件
+        $('#inpt').on('blur', function () {
+            $('#historybox').css('display', 'none');
+            init_history(); // 初始化历史记录，清空记录
+        })
+        //点击搜索按钮时，将搜索内容添加到本地存储
+        $('#btn').on('click', function () {
+            var search = inpt.value;
+            var data = localStorage.getItem('data'); //从本地存储中读取数据
+            if (data) {
+                var arr = JSON.parse(data); //如果有数据则转换成对象或数组
+            } else {
+                var arr = []; //如果没有数据，则新增一条
+            }
+            arr.push(search);
+            removalDuplicate(arr); // 对用户输入值进行处理(去重-筛选)
+            localStorage.setItem('data', JSON.stringify(arr)); //将数据写入到本地存储中
+        })
+        // 数组去重-筛选函数
+        function removalDuplicate(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                var arritem = arr[i].trim(); // 去除字符串两端空格
+                // 如果值为空，则不添加
+                if (arritem == '') {
+                    arr.splice(i, 1);
+                }
+                if (arritem !== "") {
+                    for (let j = i + 1; j < arr.length; j++) {
+                        if (arr[i] == arr[j]) {
+                            arr.splice(i, 1); //如果第二次输入的值与第一次相同，则添加第二次的值
+                        }
+                    }
+                }
+            }
+            return arr;
+        }
+        // 渲染数据
+        function historydata(searchArr) {
+            searchArr.reverse(); //反转，从后往前添加
+            // 遍历出数据
+            if (searchArr.length <= max_history) { //如果存储数据小于等于max_history,则遍历渲染
+                for (let i = 0; i < searchArr.length; i++) {
+                    $('#list').append(`<li class='on'><a href='#' class='active'>${searchArr[i]}</a><li>`);
+                }
+            } else { //否则渲染最大历史记录条数
+                for (let i = 0; i < max_history; i++) {
+                    $('#list').append(`<li class='on'><a href='#' class='active'>${searchArr[i]}</a><li>`);
+                }
+            }
+        }
+        // 初始化-清空历史记录
+        function init_history() {
+            $('#qc').html('');
+        }
+    })
+</script>
+
+</html>
