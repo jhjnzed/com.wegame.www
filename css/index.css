@@ -508,3 +508,341 @@ body {
     font-size: 17px;
     cursor: pointer;
 }
+
+.kbssjl {
+    height: 50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 200;
+    margin: 0;
+    background-color: hsla(0, 0%, 100%, .95);
+    box-shadow: 0 4px 8px -3px rgba(0, 0, 0, .1), 0 5px 10px -5px rgba(0, 0, 0, .1);
+    transition: background-color .2s linear;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.ksskbx {
+    margin: 0 auto;
+    width: 1000px;
+    height: 50px;
+    background: transparent;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.kbjsnr {
+    /* width: 500px; */
+    height: 100%;
+    float: left;
+    font-size: 15px;
+    margin-left: -16px;
+}
+
+.kbjsnr a {
+    font-weight: 700;
+    color: #3c3c3c;
+    display: inline-block;
+    padding: 0 15px;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+}
+
+.kbjsnr a:hover {
+    background: #f4f4f4;
+
+}
+
+.kbjsnr a i {
+    height: 4px;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    opacity: 1;
+    background-color: #ffb300;
+}
+
+.zzddsssk {
+    height: 50px;
+    top: 0;
+    left: 52px;
+    position: absolute;
+    font-size: 15px;
+}
+
+.zzddsssk-synr {
+    padding: 0 38px 0 19px;
+    color: #3c3c3c;
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+}
+
+.zzddsssk-synr:hover {
+    background-color: #f4f4f4;
+}
+
+.zzddsssk-synr:hover .dropdown-menu {
+    display: block;
+}
+
+.zzddsssk a span {
+    position: absolute;
+    background: url(../img/icon-select-drop.02a90074.png) no-repeat 0 50%;
+    top: 50%;
+    margin-top: -7px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    right: 13px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 116px;
+    z-index: 20;
+    top: 50px;
+    left: 0px;
+    box-shadow: 0 3px 7px -3px rgba(0, 0, 0, .1), 0 4px 8px -4px rgba(0, 0, 0, .1);
+    border: 1px solid #bfbfbf;
+    background-color: #ffffff;
+    display: none;
+}
+
+.dropdown-menu-li {
+    line-height: 40px;
+    font-size: 14px;
+    color: #3c3c3c;
+    padding: 0 19px;
+    display: block;
+    text-align: left;
+    margin: 0;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#jxbs1:hover,
+#jxbs2:hover {
+    background-color: #f4f4f4;
+}
+
+
+/* 大型单机网游 */
+.dxdjwy {
+    float: right;
+    padding: 1px 10px 0 0;
+    width: 365px;
+    height: 50px;
+    line-height: 49px;
+    overflow: hidden;
+    text-align: right;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    left: 385px;
+}
+
+.dxdjwy a {
+    color: #3c3c3c;
+    padding: 0 15px 0 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 160px;
+    display: inline-block;
+    height: 50px;
+    position: relative;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+
+
+.dxdjwy i {
+    width: 1px;
+    height: 10px;
+    background-color: #bfbfbf;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    position: relative;
+    top: 18px;
+}
+
+/* 搜索记录框 */
+.ssjlk {
+    width: 240px;
+    margin: 9px 0 0;
+    position: absolute;
+    box-sizing: border-box;
+    right: 0;
+}
+
+.ssjlk-1 {
+    border: 1px solid #ffb300;
+    background-color: rgba(255, 202, 40, .5);
+    overflow: hidden;
+    border-radius: 60px;
+    height: 32px;
+    padding-right: 48px;
+    transition: background .2s ease-in;
+    color: #757575;
+    box-sizing: border-box;
+}
+
+.ssjlk input {
+    padding: 3px 25px 3px 15px;
+    line-height: 18px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 60px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: text;
+    color: #3c3c3c;
+    font-size: 12px;
+    border: none;
+    outline: 0;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 搜索按钮 */
+.ssxan {
+    transition: background-color .2s ease-in;
+    right: 1px;
+    width: 48px;
+    height: 30px;
+    margin-top: -15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+
+.ssxan::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    background-image: url(../img/sousuo.png);
+}
+
+.resou {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #fff;
+    z-index: 20;
+    box-shadow: 0 3px 7px -3px rgba(0, 0, 0, .2), 0 4px 8px -4px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    min-width: 118px;
+    box-sizing: border-box;
+    animation: searchmenu-show-anim .2s linear 0s 1 both;
+    pointer-events: auto;
+    display: none;
+}
+
+.resou p {
+    line-height: 18px;
+    color: #757575;
+    padding-left: 18px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.resou ul {
+    position: relative;
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.tag-num {
+    padding-right: 5px;
+    float: left;
+    padding: 0 20px 0 18px;
+    position: relative;
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    margin-top: -1px;
+    width: 100%;
+    transition: background .2s ease-out;
+    overflow: hidden;
+}
+
+.tag-num div {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    line-height: 30px;
+    display: inline-block;
+    max-width: 80%;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.tag-num div::after {
+    content: "";
+    width: 22px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 8px 0 0 5px;
+    box-sizing: border-box;
+    background-image: url(../img/ico-search-tag-new.a0c00fb8.png);
+    background-repeat: no-repeat;
+}
+
+.tag-num:nth-child(3) div::after {
+    display: none;
+}
+
+.tag-num i {
+    margin-right: 5px;
+    vertical-align: top;
+    margin-top: 8px;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-position: 0 0;
+    background: url(../img/ico-search-ranking.b1abadf7.png);
+    background-repeat: no-repeat;
+}
+
+.tag-num:nth-child(2) i {
+    background-position: 0 -15px;
+}
+
+.tag-num:nth-child(3) i {
+    background-position: 0 -30px;
+}
+
+.tag-num:nth-child(4) i {
+    background-position: 0 -45px;
+}
+
+.tag-num:nth-child(5) i {
+    background-position: 0 -60px;
+}

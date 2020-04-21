@@ -68,3 +68,12 @@
       $('.zhmmdl').show()
       $('.dlkx').hide()
   })
+
+  $('#ssan').on('focus', function () {
+      $('.resou').show();
+      $('#ssan').val(" ")
+  })
+  $('#ssan').on('blur', function () {
+      $('.resou').hide();
+      $('#ssan').val("英雄联盟")
+  })
