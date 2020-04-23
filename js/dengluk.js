@@ -222,3 +222,95 @@
       $('.widget-gcard-infobtn-gs-ygz').hide();
       $('.widget-gcard-infobtn-gs-gz').show();
   })
+  $('#shipin-ts').on('click', function () {
+      $('#shipin-ts').hide()
+  })
+
+
+  //   var x = 0;
+  //   var y = 0;
+  //   //   var left = $('#xlbtyd').position().left;
+  //   // 小轮播图滚动事件
+  //   $('.zssxdyx-lrght-right').on('click', function () {
+  //       x -= 206;
+
+  //       $('#xlbtyd').css({
+  //           "left": x
+
+
+  //       })
+  //       var ydsj = $('#xlbtyd').position().left
+  //       if ($('#xlbtyd').position().left == -824) {
+  //           $('.zssxdyx-lrght-right').css({
+  //               "cursor": "default",
+  //               "pointer-events": "none",
+  //               "background": "rgba(0,0,0,.05)"
+  //           })
+
+  //           $('.zssxdyx-lrght-left').css({
+  //               "cursor": "pointer",
+  //               "pointer-events": "auto",
+  //               "background": "rgba(0, 0, 0, .15)"
+  //           })
+  //       }
+  //       console.log(ydsj)
+  //       y = ydsj
+
+  //       $('.zssxdyx-lrght-left').on('click', function () {
+
+
+
+  //           $('#xlbtyd').css({
+  //               "left": y + 206
+
+  //           })
+  //           y += 206;
+  //           if ($('#xlbtyd').position().left == 206) {
+  //               $('.zssxdyx-lrght-left').css({
+  //                   "cursor": "default",
+  //                   "pointer-events": "none",
+  //                   "background": "rgba(0,0,0,.05)"
+  //               })
+
+  //               $('.zssxdyx-lrght-right').css({
+  //                   "cursor": "pointer",
+  //                   "pointer-events": "auto",
+  //                   "background": "rgba(0, 0, 0, .15)"
+  //               })
+  //           }
+  //       })
+  //   })
+
+
+  // 小轮播图
+  let index = 0;
+  var x = 0;
+  $('.zssxdyx-lrght-right').on('click', function () {
+      index++;
+      x += -207;
+      if (index > $('.soon').length - 1) {
+          index = 0;
+      }
+      $('.soon').eq(index).css({
+          "left": x
+
+      }).fadeIn(500).siblings('li').css({
+          "left": x
+
+      }).fadeIn(500)
+  })
+
+  $('.zssxdyx-lrght-left').on('click', function () {
+      index--;
+      x += 207
+      if (index < 0) {
+          index = $('.soon').length - 1;
+      }
+      $('.soon').eq(index).css({
+          "left": -x
+
+      }).fadeIn(500).siblings('li').css({
+          "left": -x
+
+      }).fadeIn(500)
+  })

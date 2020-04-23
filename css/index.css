@@ -29,8 +29,43 @@ body {
     border-radius: 6px;
 }
 
+#shipin {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    left: 99.99%;
+}
 
+#shipin-ts {
+    width: 260px;
+    height: 120px;
+    background-color: #131213;
+    color: #fbc100;
+    position: absolute;
+    top: 24%;
+    left: 84%;
+    border-radius: 4%;
+    box-shadow: 0 6px 12px -3px #131213, 0 7px 14px -7px #FFEB3B;
+}
 
+#shipin-ts h2 {
+    font-size: 20px;
+}
+
+#shipin-ts h2>span {
+    float: right;
+    padding-right: 10px;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: #614014;
+    width: 24px;
+}
+
+#shipin-ts p {
+    text-align: center;
+    padding-top: 26px;
+    font-size: 30px;
+}
 
 .titleheader {
     position: relative;

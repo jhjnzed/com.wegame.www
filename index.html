@@ -313,7 +313,7 @@
         <!-- 正式上线的游戏 -->
         <div class="zssxdyx">
             <div class="zssxdyx-title">
-                <ul>
+                <ul id="xlbtyd">
                     <li class="soon">
                         <div class="widget-future-game-item">
                             <div class="date-flow">
@@ -425,7 +425,80 @@
                             </div>
                         </div>
                     </li>
+                    <li class="soon">
+                        <div class="widget-future-game-item">
+                            <div class="date-flow">
+                                <div class="date-flow-date"><strong>4月21日</strong> </div>
+                                <div class="date-flow-desc"><span>欢乐联机</span></div>
+                            </div>
+                            <div class="widget-gcard">
+                                <div class="widget-gcard-wp">
+                                    <!-- 上面是图片，下面是文字 -->
+                                    <div class="widget-gcard-cover">
+                                        <a href="#">
+                                            <div class="widget-gcard-cover-1122"><img
+                                                    src="./upload/oss_5e9d7df7c6da5.jpg" alt=""></div>
+                                        </a>
 
+                                    </div>
+                                    <div class="widget-gcard-info">
+                                        <div class="widget-gcard-tit">
+                                            <strong>风暴岛</strong>
+                                        </div>
+                                        <div class="widget-gcard-meta"><span>全新玩法上线</span></div>
+                                        <!-- 隐藏的关注部分 -->
+                                        <div class="widget-gcard-infobtn">
+                                            <div class="widget-gcard-infobtn-gs">
+                                                <span class="widget-gcard-infobtn-gs-ygz">已关注</span>
+                                                <span class="widget-gcard-infobtn-gs-gz">关注</span>
+                                            </div>
+                                            <a class="widget-gcard-infobtn-xx" href="#"><span>游戏详情</span></a>
+                                        </div>
+                                        <div class="forenotice-tag">
+                                            <div class="forenotice-tag-inner"><span>游戏</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="soon">
+                        <div class="widget-future-game-item">
+                            <div class="date-flow">
+                                <div class="date-flow-date"><strong>4月</strong> </div>
+                                <div class="date-flow-desc"><span>限时9元</span></div>
+                            </div>
+                            <div class="widget-gcard">
+                                <div class="widget-gcard-wp">
+                                    <!-- 上面是图片，下面是文字 -->
+                                    <div class="widget-gcard-cover">
+                                        <a href="#">
+                                            <div class="widget-gcard-cover-1122"><img
+                                                    src="./upload/oss_5e9e636ce1533.jpg" alt=""></div>
+                                        </a>
+
+                                    </div>
+                                    <div class="widget-gcard-info">
+                                        <div class="widget-gcard-tit">
+                                            <strong>无名之辈</strong>
+                                        </div>
+                                        <div class="widget-gcard-meta"><span>国风横版动作新游</span></div>
+                                        <!-- 隐藏的关注部分 -->
+                                        <div class="widget-gcard-infobtn">
+                                            <div class="widget-gcard-infobtn-gs">
+                                                <span class="widget-gcard-infobtn-gs-ygz">已关注</span>
+                                                <span class="widget-gcard-infobtn-gs-gz">关注</span>
+                                            </div>
+                                            <a class="widget-gcard-infobtn-xx" href="#"><span>游戏详情</span></a>
+                                        </div>
+                                        <div class="forenotice-tag">
+                                            <div class="forenotice-tag-inner"><span>游戏</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
 
 
@@ -471,7 +544,76 @@
         </div>
     </div>
 
+    <div id="shipin-ts">
+        <h2>本地文件<span>x</span></h2>
+        <p>利用<i>↕</i> <i>↔</i> 控制喜好</p>
+    </div>
+
     <script src="./js/dengluk.js"></script>
+
+
+
+
+    <!-- 视频你爱看不看整个框架 -->
+    <video id="shipin" preload="auto" controls="controls" loop="loop" autoplay="autoplay"
+        src="./video/Fly-again.mp4"></video>
+
+    <script>
+        // document.getElementById("shipin").animate(
+        //     [{
+        //             transform: 'translateX(0px)'
+        //         },
+        //         {
+        //             transform: 'translateX(300px)'
+        //         }
+        //     ], {
+        //         duration: 3000,
+        //         iterations: Infinity
+        //     });
+
+
+
+
+        var vol = 0.1; //1代表100%音量，每次增减0.1
+
+        var time = 10; //单位秒，每次增减10秒
+        // document.getElementById("shipin").volume = 0;
+
+        var videoElement = document.getElementById("shipin");
+        console.log(videoElement.paused);
+        videoElement.volume = 0;
+        document.onkeyup = function (event) { //键盘事件
+
+            console.log("keyCode:" + event.keyCode);
+
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+
+            if (e && e.keyCode === 38) {
+                videoElement.volume !== 1 ? videoElement.volume += vol : 1;
+                return false;
+            } else if (e && e.keyCode === 40) {
+                videoElement.volume !== 0 ? videoElement.volume -= vol : 1;
+
+                return false;
+
+            } else if (e && e.keyCode === 37) {
+                videoElement.currentTime !== 0 ? videoElement.currentTime -= time : 1;
+
+                return false;
+            } else if (e && e.keyCode === 39) {
+                videoElement.volume !== videoElement.duration ? videoElement.currentTime += time : 1;
+
+                return false;
+
+            } else if (e && e.keyCode === 32) {
+
+                videoElement.paused === true ? videoElement.play() : videoElement.pause();
+
+                return false;
+
+            }
+        };
+    </script>
 
 </body>
 
