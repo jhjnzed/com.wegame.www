@@ -2188,7 +2188,7 @@ body::after {
 .widget-price-glxys {
     font-size: 14px;
     color: #757575;
-    margin: 4px 0 0;
+    padding: 4px 0 0;
 }
 
 .jiangqits {
@@ -2284,4 +2284,8 @@ body::after {
     top: 50%;
     margin-top: -10px;
     opacity: .8;
+}
+
+#xlbtyd {
+    left: -618px;
 }

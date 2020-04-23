@@ -155,16 +155,17 @@
       //   li 
       $(".bjsgd").eq($num).addClass("gbkgbzddyd").siblings().removeClass('gbkgbzddyd')
       //   span   p 
-      $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('bjsgd').siblings().find("lbtcfwz-wzdyh-1").removeClass("currentx")
-      $('.lbtcfwz-wzdyh-tlzl').eq($num).addClass("currentx").parents('bjsgd').siblings().find("lbtcfwz-wzdyh-tlzl").removeClass("currentx")
+      $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-1").removeClass("currentx")
+      $('.lbtcfwz-wzdyh-tlzl').eq($num).addClass("currentx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-tlzl").removeClass("currentx")
       //   //   hover
-      $('.lbtcfwz-wzdyh-2').eq($num).addClass("njscdysx").parents('bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("njscdysx")
-      $('.yjlsxd').eq($num).addClass("yjlsxdx").parents('bjsgd').siblings().find(".yjlsxdx").removeClass("njscdysx")
-      $('.yydgbndys').eq($num).addClass("yydgbndysx").parents('bjsgd').siblings().find(".yydgbndysx").removeClass("yydgbndys")
+      $('.lbtcfwz-wzdyh-2').eq($num).addClass("njscdysx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("njscdysx")
+      $('.yjlsxd').eq($num).addClass("yjlsxdx").parents('.bjsgd').siblings().find(".yjlsxdx").removeClass("njscdysx")
+      $('.yydgbndys').eq($num).addClass("yydgbndysx").parents('.bjsgd').siblings().find(".yydgbndysx").removeClass("yydgbndys")
 
       // 3.3 上面的图也在跟着切换
       $('.dlbnbysxcl-cklm').eq($index).stop().fadeIn().siblings().stop().fadeOut()
   })
+
 
   // 功能四:点击右箭头，切换下一张图片，同时下面的小圆点也在跟着切换加类名
 
@@ -181,7 +182,7 @@
       $('.bjsgd').eq($num).addClass("gbkgbzddyd").siblings().removeClass('gbkgbzddyd')
 
       // 样式也动
-      //   $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('bjsgd').siblings().find("lbtcfwz-wzdyh-1").removeClass("currentx")
+      //   $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('.bjsgd').siblings().find("lbtcfwz-wzdyh-1").removeClass("currentx")
       //   $('.lbtcfwz-wzdyh-tlzl').eq($num).addClass("currentx").parents('bjsgd').siblings().find("lbtcfwz-wzdyh-tlzl").removeClass("currentx")
       //   //   hover
       //   $('.lbtcfwz-wzdyh-2').eq($num).addClass("njscdysx").parents('bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("njscdysx")
@@ -230,17 +231,20 @@
 
 
   // 小轮播图滚动事件  正式上线的游戏
-  var x = $('#xlbtyd').position().left;
+  var x = parseInt($("#xlbtyd").css("left"));
+
   //   console.log(x)
-  var z = 0;
+  var z = x + 206;
   //   var y = 0;
   $('.zssxdyx-lrght-right').on('click', function () {
-      z -= 206;
-      $('#xlbtyd').css({
-          "left": x + z,
-          //   transform: translateX(126px); 动画
-      })
+      z += 206
+      //   $('#xlbtyd').css({
+      //       "left": z,
+      //       //   transform: translateX(126px); 动画
+      //   })
+      $('#xlbtyd').css("left", z);
 
+      //   console.log(x);
       //   if ($('#xlbtyd').position().left == -824) {
       //       $('.zssxdyx-lrght-right').css({
       //           "cursor": "default",
@@ -255,25 +259,27 @@
       //   }
       //   console.log(z)
 
-      //   $('.zssxdyx-lrght-left').on('click', function () {
 
-      //       $('#xlbtyd').css({
-      //           "left": z += 206
-      //       })
-
-      //       //   if ($('#xlbtyd').position().left == 412) {
-      //       //       $('.zssxdyx-lrght-left').css({
-      //       //           "cursor": "default",
-      //       //           "pointer-events": "none",
-      //       //           "background": "rgba(0,0,0,.05)"
-      //       //       })
-      //       //       $('.zssxdyx-lrght-right').css({
-      //       //           "cursor": "pointer",
-      //       //           "pointer-events": "auto",
-      //       //           "background": "rgba(0, 0, 0, .15)"
-      //       //       })
-      //       //   }
-      //   })
   })
 
-  //   var ydsj = $('#xlbtyd').position().left
+  // var ydsj = $('#xlbtyd').position().left
+  //   $('.zssxdyx-lrght-left').on('click', function () {
+
+  //       $('#xlbtyd').css({
+  //           "left": x += 206
+  //       })
+
+
+  //       //   if ($('#xlbtyd').position().left == 412) {
+  //       //       $('.zssxdyx-lrght-left').css({
+  //       //           "cursor": "default",
+  //       //           "pointer-events": "none",
+  //       //           "background": "rgba(0,0,0,.05)"
+  //       //       })
+  //       //       $('.zssxdyx-lrght-right').css({
+  //       //           "cursor": "pointer",
+  //       //           "pointer-events": "auto",
+  //       //           "background": "rgba(0, 0, 0, .15)"
+  //       //       })
+  //       //   }
+  //   })
