@@ -1356,7 +1356,7 @@ body::after {
 }
 
 .lbtcfwz-wzdyh-1 {
-    display: inline-block;
+    /* display: inline-block; */
     height: 20px;
     line-height: 20px;
     background: url(../img/noshp_banner-tag.6dcced41.png);
@@ -1949,6 +1949,7 @@ body::after {
     padding: 0;
     min-height: 680px;
     position: relative;
+    left: 0;
 }
 
 .widget-layout-cols {
@@ -2057,6 +2058,68 @@ body::after {
 .ranknumber-ndg {
     width: 34px;
     height: 34px;
+}
+
+.cell-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: unset;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 6;
+}
+
+.cell-progress::after {
+    content: "";
+    border: 1px dashed #e0e0e0;
+    position: absolute;
+    left: 18px;
+    top: 61%;
+    bottom: 2px;
+}
+
+.cell-progress-bef::before {
+    content: "";
+    border: 1px dashed #e0e0e0;
+    position: absolute;
+    top: 0;
+    bottom: 61%;
+    left: 18px;
+}
+
+.cell-progress-dot {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bfbfbf;
+    position: absolute;
+    top: 50%;
+    margin: -8px 0 0;
+    left: 11px;
+    border-radius: 50%;
+}
+
+.cell-progress-dot-yans {
+    border: 2px solid #ff8f00;
+}
+
+.cell-progress-dot::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #ff8f00;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    margin: -3px 0 0 -3px;
+    transform: scale(0);
+    transition: all .2s ease-in;
+
+}
+
+.cell-progress-dot-yans::after {
+    transform: scale(1);
 }
 
 .widget-gcell-bd {
@@ -2212,8 +2275,20 @@ body::after {
     background-color: rgb(139, 153, 61);
 }
 
+.widget-mask-bg-QAYXZ {
+    background-color: rgb(153, 61, 85);
+}
+
 .widget-mask-bg-lol {
     background-color: #c89d46f5;
+}
+
+.widget-mask-bg-YNSK {
+    background-color: rgb(61, 116, 153);
+}
+
+.widget-mask-bg-YSDD {
+    background-color: rgb(153, 61, 108);
 }
 
 .zxlbzsr-zyydxtb {
@@ -2288,4 +2363,252 @@ body::after {
 
 #xlbtyd {
     left: -618px;
+}
+
+
+
+/* 蛋蛋君荐游戏 */
+
+
+.tui-panel-youxi {
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    z-index: 10;
+    transition: transform .2s linear, -webkit-transform .2s linear;
+    position: relative;
+    height: 410px;
+}
+
+.tui-panel-bd-youxi {
+    position: relative;
+}
+
+.dandanjun-cont-youxi {
+    height: 100%;
+    position: relative;
+}
+
+.dandanjun-words {
+    padding: 35px 30px 0 40px;
+    width: 550px;
+}
+
+.dandanjun-words h3 {
+    color: #fff;
+    font-size: 36px;
+    width: 550px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 550px;
+    position: relative;
+}
+
+.dandanjun-words h3 a {
+    color: #fff;
+}
+
+.dandanjun-words h3 a:hover {
+    text-decoration: underline;
+}
+
+.dandanjun-words p {
+    color: hsla(0, 0%, 100%, .75);
+    font-size: 14px;
+    max-height: 80px;
+    position: relative;
+    padding: 0 0 0 16px;
+    margin: 12px 0;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+}
+
+.dandanjun-words p::after {
+    background: hsla(0, 0%, 100%, .2);
+    content: "";
+    width: 3px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    bottom: 3px;
+}
+
+
+
+.dandanjun-btn {
+    margin: 15px 0 0;
+}
+
+.dandanjun-btn a {
+    width: 190px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 2px;
+    background: transparent linear-gradient(280deg, #ffc800, #ffe082) 0 0 no-repeat padding-box;
+    color: #000;
+    border: none;
+    text-align: left;
+    font-weight: 700;
+    position: relative;
+    font-size: 14px;
+    transition: all .2s ease-out;
+    min-width: 100px;
+    padding: 0 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dandanjun-btn a i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url(../img/ico-btn-arrow-r.4b0772f7.png);
+}
+
+.dandanjun-btn a:hover i {
+    animation: idright .7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes idright {
+    0% {
+        right: 8px;
+    }
+
+
+    100% {
+        right: 15px;
+    }
+}
+
+
+.dandanjun-games {
+    position: absolute;
+    left: 40px;
+    bottom: -164px;
+}
+
+.dandanjun-games-tit div {
+    color: hsla(0, 0%, 100%, .8);
+    font-size: 15px;
+    display: inline-block;
+}
+
+.dandanjun-games-tit div::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/ico-dandanjun.100044d7.png);
+    display: inline-block;
+    vertical-align: middle;
+    margin: -4px 5px 0 0;
+    opacity: .8;
+}
+
+.dandanjun-games-tit p {
+    color: hsla(0, 0%, 100%, .5);
+    padding: 0 0 0 10px;
+    display: inline-block;
+}
+
+
+.dandanjun-glist {
+    margin: 10px 0 0;
+    width: 496px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 0;
+    min-height: 50px;
+}
+
+
+.viewport-lmslb {
+    height: 100px;
+    overflow: hidden;
+    width: 98%;
+    display: block;
+    position: relative;
+}
+
+.tui-slider-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 672px;
+}
+
+.gs-list-item {
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 8px;
+    width: 152px;
+    height: 90px;
+}
+
+.gs-list-item img {
+    width: 100%;
+}
+
+.gs-list-item img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.tui-slider {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    /* -webkit-transform: translateY(-50%); */
+    transform: translateY(-50%);
+    animation: fadeIn .3s ease-in-out both;
+}
+
+.prehoutui {
+    background: none;
+}
+
+.nextqianjin {
+    background: none;
+
+}
+
+.dandanjun-bg-youxi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e4e4e4;
+    border-radius: 2px;
+    z-index: -1;
+}
+
+.dandanjun-bg-ele-youxi {
+    position: absolute;
+    width: 1050px;
+    height: 510px;
+    top: -50px;
+    right: -50px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.dandanjun-bg-ele-youxi img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
 }

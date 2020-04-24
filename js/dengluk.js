@@ -134,14 +134,10 @@
   //   轮播图切换事件
   // 定义变量
   var $num = 0;
-  // 功能2：根据上面的图片创建小圆点
-  // 2.3 默认第一个是红色的背景
-  //   $('.lbtcfwz-wzdyh-1').eq(0).addClass('current')
 
+  // 功能3：添加currentx，而且上面的图也在跟着切换
 
-  // 功能3：鼠标移入每个小圆点，对应的小圆点要添加currentx，而且上面的图也在跟着切换
-
-  // 3.1 先要给小圆点注册事件
+  //  先给注册事件
   $('.lbtcfwz-yc li').on('mouseenter', function () {
       // 获取当前的索引
       var $index = $(this).index()
@@ -151,65 +147,68 @@
       //   console.log($(".bjsgd> strong").index())
       //   console.log($num)
 
-      // 3.2 给当前的小圆点要添加currentx类名
+      // 给当前的添加currentx类名
       //   li 
       $(".bjsgd").eq($num).addClass("gbkgbzddyd").siblings().removeClass('gbkgbzddyd')
-      //   span   p 
+      //   span   
       $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-1").removeClass("currentx")
+      //   p 
       $('.lbtcfwz-wzdyh-tlzl').eq($num).addClass("currentx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-tlzl").removeClass("currentx")
       //   //   hover
       $('.lbtcfwz-wzdyh-2').eq($num).addClass("njscdysx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("njscdysx")
-      $('.yjlsxd').eq($num).addClass("yjlsxdx").parents('.bjsgd').siblings().find(".yjlsxdx").removeClass("njscdysx")
-      $('.yydgbndys').eq($num).addClass("yydgbndysx").parents('.bjsgd').siblings().find(".yydgbndysx").removeClass("yydgbndys")
 
-      // 3.3 上面的图也在跟着切换
+      //   颜色
+      $('.lbtcfwz-wzdyh-2').eq($num).addClass("yjlsxdx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("yjlsxdx")
+      //   $('.yydgbndys').eq($num).addClass("yydgbndysx").parents('.bjsgd').siblings().find(".yydgbndys").removeClass("yydgbndysx")
+
+      //  上面的图也在跟着切换
       $('.dlbnbysxcl-cklm').eq($index).stop().fadeIn().siblings().stop().fadeOut()
   })
 
 
   // 功能四:点击右箭头，切换下一张图片，同时下面的小圆点也在跟着切换加类名
 
-  // 4.1 获取右箭头，添加事件
+  // 获取右箭头，添加事件
   $('.yjtyd-right').on('click', function () {
-      // 4.2 切换下一张
+      //  切换下一张
       $num++;
       // 进行判断是不是最后一张
       if ($num == $('.dlbnbysxcl-cklm').length) {
           $num = 0;
       }
       $('.dlbnbysxcl-cklm').eq($num).stop().fadeIn().siblings().stop().fadeOut()
-      // 4.3 小圆点跟着切换
+      // 4.3 li的变化
       $('.bjsgd').eq($num).addClass("gbkgbzddyd").siblings().removeClass('gbkgbzddyd')
-
-      // 样式也动
-      //   $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('.bjsgd').siblings().find("lbtcfwz-wzdyh-1").removeClass("currentx")
-      //   $('.lbtcfwz-wzdyh-tlzl').eq($num).addClass("currentx").parents('bjsgd').siblings().find("lbtcfwz-wzdyh-tlzl").removeClass("currentx")
+      //   span   p  
+      $('.lbtcfwz-wzdyh-1').eq($num).addClass("currentx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-1").removeClass("currentx")
+      //   p 
+      $('.lbtcfwz-wzdyh-tlzl').eq($num).addClass("currentx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-tlzl").removeClass("currentx")
       //   //   hover
-      //   $('.lbtcfwz-wzdyh-2').eq($num).addClass("njscdysx").parents('bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("njscdysx")
-      //   $('.yjlsxd').eq($num).addClass("yjlsxdx").parents('bjsgd').siblings().find(".yjlsxdx").removeClass("njscdysx")
-      //   $('.yydgbndys').eq($num).addClass("yydgbndysx").parents('bjsgd').siblings().find(".yydgbndysx").removeClass("yydgbndys")
+      $('.lbtcfwz-wzdyh-2').eq($num).addClass("njscdysx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("njscdysx")
+      // 样式也动
+      $('.lbtcfwz-wzdyh-2').eq($num).addClass("yjlsxdx").parents('.bjsgd').siblings().find(".lbtcfwz-wzdyh-2").removeClass("yjlsxdx")
   })
 
 
-  // 功能六：自动轮播
+  // 自动轮播
   var timer = setInterval(function () {
       $('.yjtyd-right').click()
   }, 2000)
 
-  // 功能七： 移动到slider上面定时器删除
+  //  移动到dlbnbys上面定时器删除
   $('.dlbnbys')
       .on('mouseenter', function () {
           // 移除定时器
           clearInterval(timer)
           // 显示
-          $('.arrow').show();
+          //   $('.arrow').show();
       })
       .on('mouseleave', function () {
           timer = setInterval(function () {
               $('.yjtyd-right').click()
           }, 2000)
           // 隐藏
-          $('.arrow').hide();
+          //   $('.arrow').hide();
       })
 
 
@@ -231,55 +230,166 @@
 
 
   // 小轮播图滚动事件  正式上线的游戏
-  var x = parseInt($("#xlbtyd").css("left"));
+  //   var x = parseInt($("#xlbtyd").css("left"));
 
-  //   console.log(x)
-  var z = x + 206;
-  //   var y = 0;
+  //   //   console.log(x)
+  //   var z = x + 206;
+  //   //   var y = 0;
+  //   $('.zssxdyx-lrght-right').on('click', function () {
+  //       z += 206
+  //       //   $('#xlbtyd').css({
+  //       //       "left": z,
+  //       //       //   transform: translateX(126px); 动画
+  //       //   })
+  //       $('#xlbtyd').css("left", z);
+
+  //       //   console.log(x);
+
+  //       //   console.log(z)
+
+
+  //   })
+  var xlbtydLeft = $('#xlbtyd').position().left;
+  var sum = 0;
   $('.zssxdyx-lrght-right').on('click', function () {
-      z += 206
-      //   $('#xlbtyd').css({
-      //       "left": z,
-      //       //   transform: translateX(126px); 动画
-      //   })
-      $('#xlbtyd').css("left", z);
-
-      //   console.log(x);
-      //   if ($('#xlbtyd').position().left == -824) {
-      //       $('.zssxdyx-lrght-right').css({
-      //           "cursor": "default",
-      //           "pointer-events": "none",
-      //           "background": "rgba(0,0,0,.05)"
-      //       })
-      //       $('.zssxdyx-lrght-left').css({
-      //           "cursor": "pointer",
-      //           "pointer-events": "auto",
-      //           "background": "rgba(0, 0, 0, .15)"
-      //       })
-      //   }
-      //   console.log(z)
+      sum -= 206
+      $('#xlbtyd').css({
+          "left": xlbtydLeft + sum,
+      })
 
 
   })
 
-  // var ydsj = $('#xlbtyd').position().left
-  //   $('.zssxdyx-lrght-left').on('click', function () {
+  $('.zssxdyx-lrght-left').on('click', function () {
+      sum += 206
+      $('#xlbtyd').css({
+          "left": xlbtydLeft + sum,
+      })
 
-  //       $('#xlbtyd').css({
-  //           "left": x += 206
+  })
+
+  // 右箭头
+  //   if ($('#xlbtyd').position().left == -824) {
+  //       $('.zssxdyx-lrght-right').css({
+  //           "cursor": "default",
+  //           "pointer-events": "none",
+  //           "background": "rgba(0,0,0,.05)"
   //       })
+  //       $('.zssxdyx-lrght-left').css({
+  //           "cursor": "pointer",
+  //           "pointer-events": "auto",
+  //           "background": "rgba(0, 0, 0, .15)"
+  //       })
+  //   }
+  // ←箭头
+  //     //   if ($('#xlbtyd').position().left == 412) {
+  //     //       $('.zssxdyx-lrght-left').css({
+  //     //           "cursor": "default",
+  //     //           "pointer-events": "none",
+  //     //           "background": "rgba(0,0,0,.05)"
+  //     //       })
+  //     //       $('.zssxdyx-lrght-right').css({
+  //     //           "cursor": "pointer",
+  //     //           "pointer-events": "auto",
+  //     //           "background": "rgba(0, 0, 0, .15)"
+  //     //       })
+  //     //   }
 
 
-  //       //   if ($('#xlbtyd').position().left == 412) {
-  //       //       $('.zssxdyx-lrght-left').css({
-  //       //           "cursor": "default",
-  //       //           "pointer-events": "none",
-  //       //           "background": "rgba(0,0,0,.05)"
-  //       //       })
-  //       //       $('.zssxdyx-lrght-right').css({
-  //       //           "cursor": "pointer",
-  //       //           "pointer-events": "auto",
-  //       //           "background": "rgba(0, 0, 0, .15)"
-  //       //       })
-  //       //   }
-  //   })
+  //   小轮播切换
+
+  if ($('.zxlbzsr-bg').position().left == 0) {
+      $('.disabled').css({
+          "cursor": "default",
+          "pointer-events": "none",
+          "background": "rgba(0,0,0,.05)"
+      })
+      $('.disabled-right').on('click', function () {
+          $('.zxlbzsr-bg').css({
+              "left": -1020,
+
+          })
+
+          if ($('.zxlbzsr-bg').position().left == -1020) {
+              $('.disabled-right').css({
+                  "cursor": "default",
+                  "pointer-events": "none",
+                  "background": "rgba(0,0,0,.05)"
+              })
+              $('.disabled').css({
+                  "cursor": "pointer",
+                  "pointer-events": "auto",
+                  "background": "rgba(0, 0, 0, .15)"
+              })
+          }
+      })
+
+      $('.disabled').on('click', function () {
+          $('.zxlbzsr-bg').css({
+              "left": 0,
+          })
+
+          if ($('.zxlbzsr-bg').position().left == 0) {
+              $('.disabled').css({
+                  "cursor": "default",
+                  "pointer-events": "none",
+                  "background": "rgba(0,0,0,.05)"
+              })
+              $('.disabled-right').css({
+                  "cursor": "pointer",
+                  "pointer-events": "auto",
+                  "background": "rgba(0, 0, 0, .15)"
+              })
+          }
+      })
+  }
+
+
+
+
+
+  if ($('.tui-slider-list').position().left == 0) {
+      $('.prehoutui').css({
+          "cursor": "default",
+          "pointer-events": "none",
+          "background": "rgba(0,0,0,.05)"
+      })
+      $('.nextqianjin').on('click', function () {
+          $('.tui-slider-list').css({
+              "left": -160,
+
+          })
+
+          if ($('.tui-slider-list').position().left == -160) {
+              $('.nextqianjin').css({
+                  "cursor": "default",
+                  "pointer-events": "none",
+                  "background": "rgba(0,0,0,.05)"
+              })
+              $('.prehoutui').css({
+                  "cursor": "pointer",
+                  "pointer-events": "auto",
+                  "background": "rgba(0, 0, 0, .15)"
+              })
+          }
+      })
+
+      $('.prehoutui').on('click', function () {
+          $('.tui-slider-list').css({
+              "left": 0,
+          })
+
+          if ($('.tui-slider-list').position().left == 0) {
+              $('.prehoutui').css({
+                  "cursor": "default",
+                  "pointer-events": "none",
+                  "background": "rgba(0,0,0,.05)"
+              })
+              $('.nextqianjin').css({
+                  "cursor": "pointer",
+                  "pointer-events": "auto",
+                  "background": "rgba(0, 0, 0, .15)"
+              })
+          }
+      })
+  }
