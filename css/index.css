@@ -30,7 +30,7 @@ body::after {
     right: 0;
     width: 100vw;
     height: 100vh;
-    background: #eee url(../img/store-bg.fb2576b6.jpg);
+    background: #eee url(../imges/store-bg.fb2576b6.jpg);
     z-index: -100;
     pointer-events: none;
 }
@@ -105,7 +105,7 @@ body::after {
 .titleheader-1 a {
     width: 233px;
     height: 40px;
-    background-image: url(../img/wegame-logo-40.776e17ff.png);
+    background-image: url(../imges/wegame-logo-40.776e17ff.png);
     background-repeat: no-repeat;
     text-indent: -9999px;
     overflow: hidden;
@@ -269,7 +269,7 @@ body::after {
     height: 42px;
     margin-left: -16px;
     margin-top: -16px;
-    background: url(../img/下载.png);
+    background: url(../imges/下载.png);
     background-repeat: no-repeat;
     background-position: -157px 0;
     border-bottom: 4px solid #f9b011;
@@ -296,7 +296,7 @@ body::after {
     height: 42px;
     margin-left: -16px;
     margin-top: -16px;
-    background: url(../img/下载.png);
+    background: url(../imges/下载.png);
     background-repeat: no-repeat;
     background-position: -189px 0;
     box-sizing: border-box;
@@ -331,7 +331,7 @@ body::after {
     height: 12px;
     margin-left: -6px;
     margin-top: -6px;
-    background: url(../img/下载\ \(1\).png);
+    background: url(../imges/下载\ \(1\).png);
     background-repeat: no-repeat;
 
 }
@@ -408,7 +408,7 @@ body::after {
     position: absolute;
     top: -45px;
     left: -98px;
-    background: url(../img/qr_tips.png);
+    background: url(../imges/qr_tips.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -649,7 +649,7 @@ body::after {
 
 .zzddsssk a span {
     position: absolute;
-    background: url(../img/icon-select-drop.02a90074.png) no-repeat 0 50%;
+    background: url(../imges/icon-select-drop.02a90074.png) no-repeat 0 50%;
     top: 50%;
     margin-top: -7px;
     width: 13px;
@@ -772,7 +772,7 @@ body::after {
     content: "";
     width: 10px;
     height: 10px;
-    background: url(../img/icon-select-qianse下载.png);
+    background: url(../imges/icon-select-qianse下载.png);
     background-repeat: no-repeat;
     position: absolute;
     top: 50%;
@@ -818,7 +818,7 @@ body::after {
     width: 24px;
     height: 24px;
     margin: -12px 0 0 -12px;
-    background-image: url(../img/sousuo.png);
+    background-image: url(../imges/sousuo.png);
 }
 
 .resou {
@@ -910,7 +910,7 @@ body::after {
     vertical-align: top;
     margin: 8px 0 0 5px;
     box-sizing: border-box;
-    background-image: url(../img/ico-search-tag-new.a0c00fb8.png);
+    background-image: url(../imges/ico-search-tag-new.a0c00fb8.png);
     background-repeat: no-repeat;
 }
 
@@ -926,7 +926,7 @@ body::after {
     height: 14px;
     display: inline-block;
     background-position: 0 0;
-    background: url(../img/ico-search-ranking.b1abadf7.png);
+    background: url(../imges/ico-search-ranking.b1abadf7.png);
     background-repeat: no-repeat;
 }
 
@@ -1034,7 +1034,7 @@ body::after {
 }
 
 .scdbjsn {
-    background: url(../img/icon-select-qianse下载.png);
+    background: url(../imges/icon-select-qianse下载.png);
     width: 10px;
     height: 10px;
     display: inline-block;
@@ -1359,7 +1359,7 @@ body::after {
     /* display: inline-block; */
     height: 20px;
     line-height: 20px;
-    background: url(../img/noshp_banner-tag.6dcced41.png);
+    background: url(../imges/noshp_banner-tag.6dcced41.png);
     background-repeat: no-repeat;
     position: relative;
     background-position: 100% -25px;
@@ -1382,7 +1382,7 @@ body::after {
     content: "";
     width: 10px;
     height: 20px;
-    background: url(../img/noshp_banner-tag.6dcced41.png);
+    background: url(../imges/noshp_banner-tag.6dcced41.png);
     background-repeat: no-repeat;
     background-position: 0 -25px;
     position: absolute;
@@ -1808,7 +1808,7 @@ body::after {
     font-size: 14px;
     font-weight: 700;
     z-index: 10;
-    background: url(../img/noshp_tag-bg.c9d40ea6.png);
+    background: url(../imges/noshp_tag-bg.c9d40ea6.png);
     background-repeat: no-repeat;
     background-size: 100% 160px;
     background-position: 0 -75px;
@@ -1825,7 +1825,7 @@ body::after {
     display: block;
     height: 24px;
     position: absolute;
-    background: url(../img/noshp_tag-bg.c9d40ea6.png);
+    background: url(../imges/noshp_tag-bg.c9d40ea6.png);
     background-repeat: no-repeat;
     top: 0;
 }
@@ -1838,7 +1838,7 @@ body::after {
     display: block;
     height: 24px;
     position: absolute;
-    background: url(../img/noshp_tag-bg.c9d40ea6.png);
+    background: url(../imges/noshp_tag-bg.c9d40ea6.png);
     background-repeat: no-repeat;
     top: 0;
 }
@@ -1887,7 +1887,7 @@ body::after {
     top: 50%;
     margin-top: -10px;
     opacity: .8;
-    background: url(../img/xz-left.png);
+    background: url(../imges/xz-left.png);
     background-repeat: no-repeat;
     background-size: 100%;
     left: 50%;
@@ -1911,7 +1911,7 @@ body::after {
 }
 
 .zssxdyx-lrght-right::after {
-    background: url(../img/xz-right.png);
+    background: url(../imges/xz-right.png);
     background-repeat: no-repeat;
     background-size: 100%;
     right: 50%;
@@ -1978,7 +1978,7 @@ body::after {
 }
 
 .game-rank-hd i {
-    background-image: url(../img/kbddwh.png);
+    background-image: url(../imges/kbddwh.png);
     display: inline-block;
     width: 20px;
     height: 22px;
@@ -2323,7 +2323,7 @@ body::after {
     top: 50%;
     margin-top: -10px;
     opacity: .8;
-    background: url(../img/xz-left.png);
+    background: url(../imges/xz-left.png);
     background-repeat: no-repeat;
     background-size: 100%;
     left: 50%;
@@ -2346,7 +2346,7 @@ body::after {
 }
 
 .btn-next::after {
-    background: url(../img/xz-right.png);
+    background: url(../imges/xz-right.png);
     background-repeat: no-repeat;
     background-size: 100%;
     right: 50%;
@@ -2473,7 +2473,7 @@ body::after {
     width: 24px;
     height: 24px;
     display: inline-block;
-    background-image: url(../img/ico-btn-arrow-r.4b0772f7.png);
+    background-image: url(../imges/ico-btn-arrow-r.4b0772f7.png);
 }
 
 .dandanjun-btn a:hover i {
@@ -2508,7 +2508,7 @@ body::after {
     content: "";
     width: 24px;
     height: 24px;
-    background-image: url(../img/ico-dandanjun.100044d7.png);
+    background-image: url(../imges/ico-dandanjun.100044d7.png);
     display: inline-block;
     vertical-align: middle;
     margin: -4px 5px 0 0;
