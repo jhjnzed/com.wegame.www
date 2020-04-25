@@ -249,10 +249,12 @@
 
 
   //   })
+
+  //   热点预告
   var xlbtydLeft = $('#xlbtyd').position().left;
   var sum = 0;
   $('.zssxdyx-lrght-right').on('click', function () {
-      sum -= 206
+      sum -= 412
       $('#xlbtyd').css({
           "left": xlbtydLeft + sum,
       })
@@ -261,7 +263,7 @@
   })
 
   $('.zssxdyx-lrght-left').on('click', function () {
-      sum += 206
+      sum += 412
       $('#xlbtyd').css({
           "left": xlbtydLeft + sum,
       })
@@ -297,7 +299,7 @@
 
 
   //   小轮播切换
-
+  //   排行榜
   if ($('.zxlbzsr-bg').position().left == 0) {
       $('.disabled').css({
           "cursor": "default",
@@ -310,18 +312,18 @@
 
           })
 
-          if ($('.zxlbzsr-bg').position().left == -1020) {
-              $('.disabled-right').css({
-                  "cursor": "default",
-                  "pointer-events": "none",
-                  "background": "rgba(0,0,0,.05)"
-              })
-              $('.disabled').css({
-                  "cursor": "pointer",
-                  "pointer-events": "auto",
-                  "background": "rgba(0, 0, 0, .15)"
-              })
-          }
+          //   if ($('.zxlbzsr-bg').position().left == -1020) {
+          $('.disabled-right').css({
+              "cursor": "default",
+              "pointer-events": "none",
+              "background": "rgba(0,0,0,.05)"
+          })
+          $('.disabled').css({
+              "cursor": "pointer",
+              "pointer-events": "auto",
+              "background": "rgba(0, 0, 0, .15)"
+          })
+          //   }
       })
 
       $('.disabled').on('click', function () {
@@ -329,24 +331,24 @@
               "left": 0,
           })
 
-          if ($('.zxlbzsr-bg').position().left == 0) {
-              $('.disabled').css({
-                  "cursor": "default",
-                  "pointer-events": "none",
-                  "background": "rgba(0,0,0,.05)"
-              })
-              $('.disabled-right').css({
-                  "cursor": "pointer",
-                  "pointer-events": "auto",
-                  "background": "rgba(0, 0, 0, .15)"
-              })
-          }
+          //   if ($('.zxlbzsr-bg').position().left == 0) {
+          $('.disabled').css({
+              "cursor": "default",
+              "pointer-events": "none",
+              "background": "rgba(0,0,0,.05)"
+          })
+          $('.disabled-right').css({
+              "cursor": "pointer",
+              "pointer-events": "auto",
+              "background": "rgba(0, 0, 0, .15)"
+          })
+          //   }
       })
   }
 
 
 
-
+  //   蛋蛋君荐游戏
 
   if ($('.tui-slider-list').position().left == 0) {
       $('.prehoutui').css({
@@ -360,18 +362,18 @@
 
           })
 
-          if ($('.tui-slider-list').position().left == -160) {
-              $('.nextqianjin').css({
-                  "cursor": "default",
-                  "pointer-events": "none",
-                  "background": "rgba(0,0,0,.05)"
-              })
-              $('.prehoutui').css({
-                  "cursor": "pointer",
-                  "pointer-events": "auto",
-                  "background": "rgba(0, 0, 0, .15)"
-              })
-          }
+          //   if ($('.tui-slider-list').position().left == -160) {
+          $('.nextqianjin').css({
+              "cursor": "default",
+              "pointer-events": "none",
+              "background": "rgba(0,0,0,.05)"
+          })
+          $('.prehoutui').css({
+              "cursor": "pointer",
+              "pointer-events": "auto",
+              "background": "rgba(0, 0, 0, .15)"
+          })
+          //   }
       })
 
       $('.prehoutui').on('click', function () {
@@ -379,17 +381,66 @@
               "left": 0,
           })
 
-          if ($('.tui-slider-list').position().left == 0) {
-              $('.prehoutui').css({
-                  "cursor": "default",
-                  "pointer-events": "none",
-                  "background": "rgba(0,0,0,.05)"
-              })
-              $('.nextqianjin').css({
-                  "cursor": "pointer",
-                  "pointer-events": "auto",
-                  "background": "rgba(0, 0, 0, .15)"
-              })
-          }
+          //   if ($('.tui-slider-list').position().left == 0) {
+          $('.prehoutui').css({
+              "cursor": "default",
+              "pointer-events": "none",
+              "background": "rgba(0,0,0,.05)"
+          })
+          $('.nextqianjin').css({
+              "cursor": "pointer",
+              "pointer-events": "auto",
+              "background": "rgba(0, 0, 0, .15)"
+          })
+          //   }
+      })
+  }
+
+
+
+
+  if ($('#nzuidete').position().left == 0) {
+      $('.YouWantTo').css({
+          "cursor": "default",
+          "pointer-events": "none",
+          "background": "rgba(0,0,0,.05)"
+      })
+      $('.startDancing').on('click', function () {
+          $('#nzuidete').css({
+              "left": -1030,
+
+          })
+
+          //   if ($('#nzuidete').position().left == -160) {
+          $('.startDancing').css({
+              "cursor": "default",
+              "pointer-events": "none",
+              "background": "rgba(0,0,0,.05)"
+          })
+          $('.YouWantTo').css({
+              "cursor": "pointer",
+              "pointer-events": "auto",
+              "background": "rgba(0, 0, 0, .15)"
+          })
+          //   }
+      })
+
+      $('.YouWantTo').on('click', function () {
+          $('#nzuidete').css({
+              "left": 0,
+          })
+
+          //   if ($('#nzuidete').position().left == 0) {
+          $('.YouWantTo').css({
+              "cursor": "default",
+              "pointer-events": "none",
+              "background": "rgba(0,0,0,.05)"
+          })
+          $('.startDancing').css({
+              "cursor": "pointer",
+              "pointer-events": "auto",
+              "background": "rgba(0, 0, 0, .15)"
+          })
+          //   }
       })
   }

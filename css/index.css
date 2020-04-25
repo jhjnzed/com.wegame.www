@@ -1123,6 +1123,7 @@ body::after {
 
 .zctfs2 img {
     width: 100%;
+    transition: all .15s ease-out;
 }
 
 .zctfs2:hover img {
@@ -1950,6 +1951,7 @@ body::after {
     min-height: 680px;
     position: relative;
     left: 0;
+    transition: all 0.35s ease-out 0s;
 }
 
 .widget-layout-cols {
@@ -2363,6 +2365,7 @@ body::after {
 
 #xlbtyd {
     left: -618px;
+    transition: all 0.35s ease-out;
 }
 
 
@@ -2477,17 +2480,26 @@ body::after {
 }
 
 .dandanjun-btn a:hover i {
-    animation: idright .7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: idright .6s ease-out 0s infinite both;
+
 }
 
 @keyframes idright {
     0% {
-        right: 8px;
+        transform: translateZ(0);
     }
 
+    25% {
+        -webkit-transform: translate3d(5px 0, 0);
+        transform: translate3d(5px 0, 0);
+    }
+
+    75% {
+        transform: translate3d(5px, 0, 0);
+    }
 
     100% {
-        right: 15px;
+        transform: translateZ(0);
     }
 }
 
@@ -2546,6 +2558,7 @@ body::after {
     left: 0;
     z-index: 1;
     width: 672px;
+    transition: all 0.25s ease-out 0s;
 }
 
 .gs-list-item {
@@ -2558,6 +2571,7 @@ body::after {
 
 .gs-list-item img {
     width: 100%;
+    transition: all 0.15s ease-out;
 }
 
 .gs-list-item img:hover {
@@ -2611,4 +2625,253 @@ body::after {
     height: 100%;
     object-fit: cover;
     position: relative;
+}
+
+.zuijingx {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+.zuijingx-youx {
+    overflow: hidden;
+    height: inherit;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.zuijingx-youx ul {
+    width: 2380px;
+    position: relative;
+    left: 0;
+    transition: all 0.35s ease-out 0s;
+}
+
+.zuijingx-youx ul li {
+    display: inline-block;
+    width: 340px;
+    padding: 0 20px 0 0;
+    white-space: normal;
+    vertical-align: middle;
+}
+
+.widget-updates-box-innner {
+    width: 321px;
+    border-radius: 2px;
+    overflow: hidden;
+    background: transparent;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: box-shadow .2s ease-out, -webkit-box-shadow .2s ease-out;
+}
+
+.widget-updates-box-innner:hover {
+    box-shadow: 0 6px 12px -3px rgba(0, 0, 0, .2), 0 7px 14px -7px rgba(0, 0, 0, .2);
+}
+
+.widget-updates-box-innner:hover .we-image-figure {
+    transform: scale(1.1);
+}
+
+.we-image-figure {
+    transition: all .15s ease-out;
+    width: 100%;
+}
+
+.tui-figure {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 145px;
+    /* min-height: 404px; */
+    display: block;
+}
+
+.figure {
+    width: 100%;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    overflow: hidden;
+    background-size: 62px 49px;
+    background-position: 50% 70px;
+}
+
+.figure-info {
+    margin: 180px 0 0;
+    padding: 20px 16px 0;
+    position: relative;
+    z-index: 12;
+    background-color: #fff;
+}
+
+.game-poster {
+    position: relative;
+    margin: -5px 0 16px;
+}
+
+.game-poster-cover {
+    width: 64px;
+    height: 84px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 2px solid #fff;
+    display: block;
+}
+
+.game-poster-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-poster-cont {
+    padding-left: 74px;
+    margin-top: 3px;
+}
+
+.game-poster-cont h4 {
+    font-size: 14px;
+    margin: 0 0 9px;
+    font-weight: 400;
+    color: #3c3c3c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
+    display: block;
+}
+
+.game-poster-cont h4:hover,
+.game-poster-btn:hover {
+    color: #f69c00;
+}
+
+.gstags {
+    font-size: 12px;
+    height: 19px;
+    overflow: hidden;
+    color: #757575;
+}
+
+.svg-arrow-right {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -3px -8px 0 3px;
+}
+
+.svg-arrow-right-huihua {
+    width: 16px;
+    height: 16px;
+    transform: rotate(-45deg);
+    fill: none;
+    stroke-width: 2;
+    stroke: #bfbfbf;
+}
+
+.game-poster-btn:hover .svg-arrow-right-huihua {
+    stroke: #f69c00;
+}
+
+.game-poster-btn {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    color: #757575;
+    font-size: 13px;
+}
+
+.figure-info-tit {
+    font-size: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    height: auto;
+    max-height: 26px;
+    color: #3c3c3c;
+    font-weight: 700;
+    max-width: 100%;
+    line-height: 20px;
+}
+
+.figure-summary {
+    text-align: left;
+    height: 64px;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    color: #757575;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.figure-other {
+    position: relative;
+    height: 43px;
+    padding: 12px 0 0;
+    margin: 10px 0 0;
+    color: #757575;
+}
+
+.figure-other::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #e4e4e4;
+}
+
+.update--views {
+    float: left;
+    height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.update--views-right {
+    float: right;
+}
+
+.update--views i {
+    margin: -3px 4px 0 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+}
+
+.yincxiaoyan {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+.skin-panel-bg {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
