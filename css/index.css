@@ -10,7 +10,7 @@ body {
 
     word-wrap: break-word;
     overflow-y: scroll;
-    min-height: 10000px !important;
+    min-height: 1000px !important;
     background-color: #eee;
     min-width: 1200px;
     left: 0;
@@ -2959,6 +2959,7 @@ body::after {
     width: 100%;
     display: block;
     position: relative;
+    cursor: pointer;
 }
 
 .tui-slider-list-cf {
@@ -2970,11 +2971,60 @@ body::after {
     z-index: 1;
 }
 
-.tui-slider-list-cf li {
+
+
+
+.tui-slider-list-cf-1 {
     display: inline-block;
     vertical-align: middle;
     padding: 0 20px 0 0;
-    width: 471px;
+    width: 491px;
+}
+
+.tui-slider-list-cf-2 {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px 0 0;
+    width: 245px;
+    overflow: hidden;
+}
+
+.tui-slider-list-beijinse {
+    background-color: #fff;
+    width: 225px;
+    height: 284px;
+}
+
+.tui-slider-list-cf-2:hover .tui-slider-list-beijinse {
+    background-color: #f4f4f4;
+}
+
+.tui-slider-list-beijinse:hover .tui-slider-list-cf-2-img img {
+    transform: scale(1.1);
+}
+
+.befkjshai::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-top: 1px solid #e4e4e4;
+}
+
+.tui-slider-list-cf-2-img {
+    height: 126px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tui-slider-list-cf-2-img img {
+    width: 100%;
+    transition: all .15s ease-out;
+}
+
+.tui-slider-list-cf-2-wenzi {
+    padding: 11px 15px 0;
 }
 
 .tui-slider-list-cf li:hover .ncard-hd img {
@@ -2994,6 +3044,7 @@ body::after {
     height: 285px;
     width: 199px;
     display: inline-block;
+    overflow: hidden;
 }
 
 .ncard-hd img {
@@ -3135,3 +3186,335 @@ body::after {
     border-radius: 300px;
     background-color: #e4e4e4;
 }
+
+
+/* 底部 */
+
+.siteFooterWrap {
+    padding: 56px 0;
+    background-color: #191919;
+}
+
+.widget-linkgroup {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    word-wrap: normal;
+    z-index: 100;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+.app-version {
+    margin-right: 178px;
+    font-size: 0;
+    white-space: nowrap;
+    word-wrap: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.app-version h2 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.widget-link-bd {
+    width: 50px;
+    /* overflow: hidden; */
+    display: inline-block;
+}
+
+.widget-link-bd ul {
+    margin-right: -27px;
+}
+
+.widget-link-bd ul li {
+    float: left;
+    padding-right: 27px;
+}
+
+.app-pcduan {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    position: relative;
+    display: block;
+    color: rgba(199, 201, 203, 0.4);
+    white-space: nowrap;
+}
+
+.app-pcduan i {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+    border: 1px solid #3a3a3a;
+    border-radius: 50%;
+    display: block;
+}
+
+.app-pcduan i::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+
+}
+
+.PC-APP::before {
+    background-image: url(../imges/pc-下载.png);
+}
+
+.wB-app {
+    background-image: url(../imges/wb-下载\ \(2\).png);
+    opacity: 0.4;
+}
+
+.wX-app {
+    background-image: url(../imges/WX-下载\ \(2\).png);
+    opacity: 0.4;
+}
+
+.get-linkwidget {
+    font-size: 0;
+    white-space: nowrap;
+    word-wrap: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.t-linkwidget-lin {
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+}
+
+.app-pcduan:hover i::before,
+.app-pcduan:hover:hover .wB-app,
+.app-pcduan:hover:hover .wX-app {
+    opacity: 1;
+}
+
+.app-pcduan:hover {
+    color: rgba(199, 201, 203, 0.8);
+}
+
+.widget-link-rcode {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 100%;
+    width: 144px;
+    height: 144px;
+    padding: 7px;
+    margin-left: -72px;
+    margin-bottom: 22px;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.widget-link-rcode img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    font-size: 0;
+    animation: fadeIn .3s ease-in-out both;
+    vertical-align: middle;
+}
+
+.app-pcduan:hover .widget-link-rcode {
+    display: block;
+}
+
+.app-pcduan:hover .widget-link-rcode::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+    bottom: -10px;
+    border-width: 10px 10px 0;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+}
+
+
+
+.widget-copyright {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.widget-copyright p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    color: #5d5d5d;
+}
+
+.widget-copyright:hover p {
+    color: azure;
+}
+
+
+
+
+/* 导航栏 */
+.gsider {
+    width: 54px;
+    min-height: 54px;
+    position: fixed;
+    left: 50vw;
+    margin-left: 555px;
+    z-index: 150;
+    transform: translateZ(0);
+    background: #fff;
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .05);
+    border-radius: 54px;
+    bottom: 80px !important;
+}
+
+.gsider-group {
+    display: block;
+    position: relative;
+}
+
+.gsider-group-tit {
+    font-size: 14px;
+    width: 40px;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+    margin: 18px auto 0;
+    line-height: 16px;
+}
+
+.gsider-button-list {
+    padding: 15px 0 0;
+    position: relative;
+    margin-top: -8px;
+}
+
+.gs-button-appointment {
+    height: 37px;
+    transition: all .15s linear;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    position: relative;
+
+}
+
+.gs-button-appointment i {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -17px 0 0 -17px;
+    opacity: .45;
+    z-index: 5;
+    transition: all .15s ease-out;
+}
+
+.tui-tips-middle-lef {
+    width: auto;
+    min-width: 15px;
+    white-space: nowrap;
+    left: auto;
+    right: 105%;
+    top: 2px;
+    bottom: auto;
+    opacity: 1;
+    transition: all .15s ease-out;
+    pointer-events: none;
+    padding: 9px 10px;
+    border-radius: 2px;
+    font-size: 12px;
+    text-align: justify;
+    background: #fff;
+    border: 1px solid #bfbfbf;
+    color: #3c3c3c;
+    position: absolute;
+    line-height: 1.5;
+    z-index: 100;
+    box-shadow: 0 3px 7px -3px rgba(0, 0, 0, .2), 0 4px 8px -4px rgba(0, 0, 0, .2);
+    opacity: 0;
+}
+
+.tui-tips-middle-lef::after {
+    content: "";
+    width: 30px;
+    height: 12px;
+    position: absolute;
+    transform: rotate(-90deg);
+    bottom: auto;
+    top: 13px;
+    left: auto;
+    right: -21px;
+    background-image: url(../imges/ico-tui-tips-arrow.d6d30e16.png);
+    opacity: 0;
+}
+
+.gsider-group-gsid {
+    padding: 8px 0 15px;
+}
+
+.gs-button-appointment:hover .tui-tips-middle-lef,
+.gs-button-appointment:hover .tui-tips-middle-lef::after {
+    opacity: 1;
+}
+
+#RDYG-dh:hover {
+    fill: #f50206;
+}
+
+#PHB-TP:hover {
+    fill: #ffca28;
+}
+
+#DDJJGM-TP:hover {
+    fill: #0d394e;
+}
+
+#SJGL-TP:hover {
+
+    fill: #d8903b;
+}
+
+#TGP-TP:hover {
+    fill: #fbc100;
+}
+
+#GWC-TP:hover {
+    fill: #fc6e88;
+}
+
+#HJ-TP:hover {
+    fill: #9E9E9E;
+}
+
+
+    /* 控制
+    height: 52px;
+    background-color: #ffca28;
+    border-radius: 50%; */
