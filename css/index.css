@@ -2875,3 +2875,263 @@ body::after {
     top: 50%;
     transform: translateY(-50%);
 }
+
+/* 测试专区 */
+.panel-main-cont {
+    width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.tzone-panel-cont {
+    height: 460px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.tzone-panel-cont::after {
+    content: "";
+    background-image: url(../upload/tzone-bg-null.bd944fea.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 460px;
+    z-index: -1;
+
+}
+
+.tzone-panel-text {
+    padding: 30px 0 0 40px;
+}
+
+.tzone-panel-text h2 {
+    font-size: 36px;
+    color: #fff;
+    height: 50px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tzone-panel-desc {
+    position: relative;
+    min-height: 65px;
+}
+
+.tzone-panel-desc p {
+    font-size: 13px;
+    color: hsla(0, 0%, 100%, .6);
+    width: 380px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tzone-panel-desc span {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 178px;
+    height: 40px;
+    line-height: 40px;
+    background: transparent linear-gradient(280deg, #ffc800, #ffe082) 0 0 no-repeat padding-box;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 16px;
+    display: block;
+    transition: all .2s ease-out;
+}
+
+.tzone-panel-game {
+    height: 300px;
+    overflow: hidden;
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.tui-slider-list-cf {
+    white-space: nowrap;
+    padding-left: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.tui-slider-list-cf li {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px 0 0;
+    width: 471px;
+}
+
+.tui-slider-list-cf li:hover .ncard-hd img {
+    transform: scale(1.1);
+}
+
+.tui-slider-list-cf li:hover .ncard-hd-right {
+    background: #f4f4f4;
+}
+
+.tui-slider-list-cf li:hover .tzone-feeds-inner {
+    background: #eee;
+}
+
+.ncard-hd {
+    position: relative;
+    height: 285px;
+    width: 199px;
+    display: inline-block;
+}
+
+.ncard-hd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .15s ease-out;
+}
+
+.ncard-hd-right {
+    width: 271px;
+    padding: 11px 20px 0;
+    height: 285px;
+    overflow: hidden;
+    position: absolute;
+    display: inline-block;
+    background-color: #fff;
+    transition: background .15s ease-out;
+}
+
+.tzone-game-info {
+    height: 225px;
+    padding-bottom: 10px;
+}
+
+.tzone-game-info-p1 {
+    padding-top: 6px;
+    padding: 0 0 4px;
+    color: #3c3c3c;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.tzone-game-info-p2 {
+    padding-top: 4px;
+    padding: 2px 0 4px;
+    font-size: 12px;
+    color: #757575;
+    margin-top: 8px;
+}
+
+.tzone-game-info-p3 {
+    height: 20px;
+    color: #757575;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 115px;
+    line-height: 19px;
+    margin-top: 2px;
+
+}
+
+.tzone-feeds-inner {
+    background: #f4f4f4;
+    transition: all .2s ease-in;
+    padding: 12px 15px;
+    height: 123px;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+.tzone-feeds-cont {
+    font-size: 12px;
+    color: #757575;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 72px;
+    text-align: justify;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.tzone-feeds-ft {
+    width: 201px;
+    height: 21px;
+}
+
+.tzone-feeds-quote {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.ico-svg-quote {
+    width: 28px;
+    height: 24px;
+    top: 104px;
+    left: 8px;
+    position: absolute;
+    display: inline-block;
+    background-image: url(../upload/left_quotes.3d50f93c.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+
+}
+
+.ico-svg-quote-right {
+    width: 28px;
+    height: 24px;
+    position: absolute;
+    display: inline-block;
+    bottom: 72px;
+    right: 2px;
+    background-image: url(../upload/right_quotes.73c72983.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+}
+
+.tzone-game-tips {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 50px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #757575;
+
+}
+
+.tzone-game-tips span {
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    width: 100%;
+    border-radius: 300px;
+    background-color: #e4e4e4;
+}
