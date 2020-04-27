@@ -491,6 +491,62 @@
           scrollTop: CSZQcsfw
       })
   })
+
+
+
+
+
+  $(function () {
+      // 滚动事件
+      $(document).scroll(function () {
+          // 各楼层高度
+          let HDtop = $(document).scrollTop();
+          let RyugaoS = $('#Ryugao').offset().top;
+          let PHBpbang = $('#PHB-pbang').offset().top;
+          let DDTJgm = $('#DDTJ-gm').offset().top;
+          let ZJGXuijg = $('#ZJGX-zuijg').offset().top;
+          let CSZQcsfw = $('#CSZQ-csfw').offset().top;
+          if (CSZQcsfw <= HDtop) {
+              $('#RDYG-dh').removeClass('currentSKH')
+              $('#PHB-TP').removeClass('currentSKH')
+              $('#DDJJGM-TP').removeClass('currentSKH')
+              $('#SJGL-TP').removeClass('currentSKH')
+              $('#TGP-TP').addClass('currentSKH')
+          } else if (ZJGXuijg <= HDtop) {
+              $('#RDYG-dh').removeClass('currentSKH')
+              $('#PHB-TP').removeClass('currentSKH')
+              $('#DDJJGM-TP').removeClass('currentSKH')
+              $('#SJGL-TP').addClass('currentSKH')
+              $('#TGP-TP').removeClass('currentSKH')
+          } else if (DDTJgm <= HDtop) {
+              $('#RDYG-dh').removeClass('currentSKH')
+              $('#PHB-TP').removeClass('currentSKH')
+              $('#DDJJGM-TP').addClass('currentSKH')
+              $('#SJGL-TP').removeClass('currentSKH')
+              $('#TGP-TP').removeClass('currentSKH')
+          } else if (PHBpbang <= HDtop) {
+              $('#RDYG-dh').removeClass('currentSKH')
+              $('#PHB-TP').addClass('currentSKH')
+              $('#DDJJGM-TP').removeClass('currentSKH')
+              $('#SJGL-TP').removeClass('currentSKH')
+              $('#TGP-TP').removeClass('currentSKH')
+          } else if (RyugaoS <= HDtop) {
+              $('#RDYG-dh').addClass('currentSKH')
+              $('#PHB-TP').removeClass('currentSKH')
+              $('#DDJJGM-TP').removeClass('currentSKH')
+              $('#SJGL-TP').removeClass('currentSKH')
+              $('#TGP-TP').removeClass('currentSKH')
+              $('.gsider').show()
+          } else {
+            $('.gsider').hide()
+        }
+      })
+  })
+
+
+
+
+
   // 点击返回
   $("#HJ-TP").on("click", function () {
       $("html,body").animate({
@@ -500,9 +556,6 @@
 
 
   $('#GWC-TP').on('click', function () {
-    $('.dlkzh').show();
-    $('.zzc').show();
-})
-
-
-
+      $('.dlkzh').show();
+      $('.zzc').show();
+  })

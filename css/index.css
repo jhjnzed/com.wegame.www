@@ -3514,8 +3514,8 @@ body::after {
 }
 
 
-/* .currentSKH {
-    height: 52;
+.currentSKH {
+    height: 52px;
     background-color: #ffca28;
     border-radius: 50px
-} */
+}
