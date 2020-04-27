@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeGame 上的 游戏列表</title>
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <link rel="stylesheet" href="./css/suoyourenwu.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <!-- 遮罩层 -->
+
+
+    <div class="zzc"></div>
+    <!-- 组成头部+登录框 -->
+
+    <div class="titleheader">
+        <div class="titleheader-1">
+            <a href="./index.html"></a>
+        </div>
+        <div class="titleheader-2">
+            <ul>
+
+                <li class="adystab"><a style="
+                    color: #fff;
+                " class="adystab-1" href="./index.html">商店</a></li>
+                <li class="adystab"><a href="javascript:;">客户端</a></li>
+                <li class="adystab"><a href="javascript:;">移动端</a></li>
+                <li class="adystab"><a href="javascript:;">翼计划</a></li>
+                <li class="adystab"><a href="javascript:;">帮助反馈</a></li>
+            </ul>
+        </div>
+        <div class="titleheader-3">
+            <a class="titleheader-3-1" href="javascript:;">开发者平台</a>
+            <a class="titleheader-3-2" href="
+                http://dldir1.qq.com/tgc/wegame/mini/repo/WeGameMiniLoader.std.2.03.03.2031.exe" target="_blank"
+                rel="noopener noreferrer">下载客户端</a>
+            <div class="dlk">
+                <a class="titleheader-3-3" href="javascript:;">登录</a>
+                <div class="dlkzh">
+                    <div class="dlks">
+                        <ul>
+                            <li class="dlks-1"><a id="diji1" href="javascript:;"></a></li>
+                            <li class="dlks-2"><a id="diji2" href="javascript:;"></a></li>
+                        </ul>
+                        <a class="dlks-3" href="javascript:;"></a>
+                    </div>
+                    <!-- QQ登录的这边 -->
+                    <div class="dlkx">
+                        <h2>快速安全登录</h2>
+                        <p>请使用 <a target="_blank" href="https://im.qq.com/mobileqq/#from=login">QQ手机版</a> 扫描二维码，<br>
+                            或点击头像授权登录。</p>
+
+                        <div class="dltx">
+                            <ul>
+                                <li class="dltx-1 zgbfaftydwt"><img class="jiaokjss" src="./upload/ptqrshow" alt="">
+                                </li>
+                                <li class="dltx-1"> <img src="./upload/g (1).jpg" alt=""> <span style="
+                                    color: red;
+                                ">猎物</span>
+                                </li>
+                                <li class="dltx-1"><img src="./upload/g.jpg" alt=""> <span>猎人</span></li>
+                            </ul>
+                        </div>
+                        <div class="dlwzys">
+                            <a id="zhmmdl" href="javascript:;">帐号密码登录 </a>
+                            <i>|</i>
+                            <a target="_blank" href="https://ssl.zc.qq.com/v3/index-chs.html?from=pt">注册新帐号</a>
+                            <i>|</i>
+                            <a href="https://support.qq.com/products/14800" target="_blank">意见反馈</a>
+                        </div>
+                    </div>
+                    <!-- 微信登录的这边 -->
+                    <div class="wxdlk">
+                        <h2>微信登录</h2>
+                        <p>QQ与微信帐号的信息独立，游戏资产不互通</p>
+                        <div>
+                            <div class="wxdlk-1"><img src="./upload/001XdUN7hMOqcDRV.jpg" alt=""> </div>
+                            <div class="wxdlk-2">
+                                <p>请使用微信扫描二维码登录</p>
+                                <p style="
+                                color: #999;
+                                font-weight: bold;
+                            ">“WeGame国内站点”</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 账号密码登录的这边 -->
+                    <div class="zhmmdl">
+                        <h2>帐号密码登录</h2>
+                        <p>推荐使用
+                            <a id="ksanqdl" href="javascript:;">快速安全登录</a>
+                            ，防止盗号。
+                        </p>
+                        <div class="zhmmdl-1"> <input id="lsxt1" type="text" placeholder="支持QQ号/邮箱/手机号登录"> </div>
+                        <div style="
+                        margin-top: 12px;
+                    " class="zhmmdl-1"> <input id="lsxt2" type="password" placeholder="密码"> </div>
+                        <div class="lvdlan">登 录</div>
+                        <div class="dlwzys">
+                            <a
+                                href="https://aq.qq.com/v2/uv_aq/html/reset_pwd/pc_reset_pwd_input_account.html?v=3.0&old_ver_account=">忘了密码？
+                            </a>
+                            <i>|</i>
+                            <a target="_blank" href="https://ssl.zc.qq.com/v3/index-chs.html?from=pt">注册新帐号</a>
+                            <i>|</i>
+                            <a href="https://support.qq.com/products/14800" target="_blank">意见反馈</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 空白搜索框 -->
+    <div class="kbssjl">
+        <div class="ksskbx">
+            <div class="kbjsnr"><a href="./index.html">精选<i></i></a></div>
+            <div class="zzddsssk">
+                <a class="zzddsssk-synr" href="javascript:;">所有内容 <i class="huangsedx"></i><span></span>
+                    <div class="dropdown-menu">
+                        <div id="jxbs1" class="dropdown-menu-li ">娱乐应用</div>
+                        <div id="jxbs2" class="dropdown-menu-li">更多内容</div>
+                    </div>
+                </a>
+
+            </div>
+            <!-- 大型单机网游 -->
+            <div class="dxdjwy">
+                <a href="javascript:;">大型网游</a>
+                <i>|</i>
+                <a href="javascript:;">单机</a>
+                <i>|</i>
+                <a style="
+                font-weight: bold;
+                color: rgb(255, 150, 0);
+            " href="javascript:;">类狼人杀游戏</a>
+                <i>|</i>
+                <a style="
+                font-weight: bold;
+                color: rgb(255, 150, 0);
+            " href="javascript:;">九霄缳神记</a>
+            </div>
+            <!-- 搜索记录框 -->
+            <div class="ssjlk">
+                <p id="nzdcflm" class="ssjlk-1">
+                    <input id="ssan" type="text" placeholder="英雄联盟">
+                    <i id="ssjlk-1-xs"></i>
+                    <span id="djnjnqdl" class="ssxan"></span>
+                </p>
+                <!-- 最近搜索 -->
+                <ul id="zjsscbg" class="zjss">
+                    <li class="zjss-zjyc">
+                        <span class="zjss-1">最近搜索</span>
+                        <span class="zjss-2">清除所有</span>
+                    </li>
+                    <!-- <li>
+                        <a href=""></a><i></i>
+                    </li> -->
+
+                </ul>
+                <!-- 热搜 -->
+                <div class="resou">
+                    <p>热搜</p>
+                    <ul>
+                        <li class="tag-num">
+                            <div><i></i>
+                                英雄联盟
+                            </div>
+                        </li>
+                        <li class="tag-num">
+                            <div><i></i>
+                                九霄缳神记
+                            </div>
+                        </li>
+                        <li class="tag-num">
+                            <div><i></i>
+                                风暴岛
+                            </div>
+                        </li>
+                        <li class="tag-num">
+                            <div><i></i>
+                                剑网3
+                            </div>
+                        </li>
+                        <li class="tag-num">
+                            <div><i></i>
+                                梦三国2
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 游戏图片 -->
+    <div class="zuijingx">
+        <div class="zuijingx-youx">
+            <ul id="nzuidete">
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320.jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>群雄逐鹿HD</h3>
+                            <p>免费</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (1).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>隐形守护者</h3>
+                            <p>¥
+                                26
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (2).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>三国杀</h3>
+                            <p>免费</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (3).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>电竞俱乐部</h3>
+                            <p>¥
+                                38</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (4).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>最终幻想14</h3>
+                            <p>时长免费</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (5).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>中国式家长</h3>
+                            <p>¥
+                                36</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (6).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>波西亚时光</h3>
+                            <p>¥
+                                98</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (7).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>围攻</h3>
+                            <p>敬请期待</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (8).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>星际战甲</h3>
+                            <p>免费</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="we-popover__reference">
+                    <div class="figure-coverac">
+                        <a href="javascript:;"><img src="./upload/320 (9).jpg" alt=""></a>
+                        <div class="figure-info">
+                            <h3>电竞传奇</h3>
+                            <p>¥
+                                36</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="skin-panel-bg">
+            <div class="btn-pre   YouWantTo"></div>
+            <div class="btn-next startDancing"></div>
+        </div>
+    </div>
+
+
+    <!-- 全部内容 共414款 -->
+
+    <div class="fr-mainf">
+        <div class="fr-main-cont">
+            <div class="frm-cont-hd">
+                <p style="
+               line-height: 26px;
+           ">全部内容 共414款</p>
+                <div class="turn-r">
+                    <ul id="tABLI">
+                        <li class="yjlsxdx">火爆新品</li>
+                        <li>本周热门</li>
+                        <li>最新上架</li>
+                        <li>折扣促销</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="frm-cont-bd jsrnxs item">
+                <ul>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/as320.jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>梦三国2</h2>
+                                <p>2020-01-09 上线 推荐率 69.8%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">MMORPG</a>
+                                    <a href="javascript:;">moba</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">三国</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">免费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (10).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>龙之谷</h2>
+                                <p>2019-10-24 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">爽快手感</a>
+                                    <a href="javascript:;">多人联机</a>
+                                    <a href="javascript:;">Q版画风</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">免费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (11).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>奇奥英雄传</h2>
+                                <p>2020-04-23 不删档付费测试</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">纸牌</a>
+                                    <a href="javascript:;">休闲游戏</a>
+                                    <a href="javascript:;">Q版画风</a>
+                                    <a href="javascript:;">手绘画风</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">免费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (12).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>真三国无双Online</h2>
+                                <p>2019-09-24 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">三国</a>
+                                    <a href="javascript:;">经典回归</a>
+                                    <a href="javascript:;">动作</a>
+                                    <a href="javascript:;">爽快手感</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">免费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (13).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>古剑奇谭网络版</h2>
+                                <p>2019-07-08 上线 推荐率 70.4%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">MMORPG</a>
+                                    <a href="javascript:;">古代仙侠</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">中国文化</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">时长付费</div>
+                        </div>
+                    </li>
+
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (14).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>剑网3</h2>
+                                <p>2019-06-20 上线 推荐率 82.0%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">MMORPG</a>
+                                    <a href="javascript:;">武侠</a>
+                                    <a href="javascript:;">唯美画面</a>
+                                    <a href="javascript:;">剧情丰富</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">时长付费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (15).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>风暴岛</h2>
+                                <p>2020-04-01 上线 推荐率 81.1%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">生存</a>
+                                    <a href="javascript:;">社交</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">¥
+                                36
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (16).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>海战世界</h2>
+                                <p>2019-10-25 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">航海</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">即时战略</a>
+                                    <a href="javascript:;">二战</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">免费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (17).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>坦克世界</h2>
+                                <p>2019-07-23 正式登陆 推荐率 63.8%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">射击</a>
+                                    <a href="javascript:;">多人联机</a>
+                                    <a href="javascript:;">军事题材</a>
+                                    <a href="javascript:;">爽快手感</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">免费</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (18).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>九霄缳神记</h2>
+                                <p>2020-04-15 正式发售 推荐率 67.2%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">闯关</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">付费软件</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">¥
+                                68
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (29).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>改变：一个小故事</h2>
+                                <p>2020-04-17 上线 推荐率 86.4%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">休闲游戏</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">画面优美</a>
+                                    <a href="javascript:;">单人</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">¥
+                                6
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="frm-cont-bd item">
+                <ul>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img style="
+                            height: 100%;
+                        " src="./upload/5a4dab11a7058161f5931d2beb139a68.jpeg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>英雄联盟</h2>
+                                <p>2011-09-22 公测 FPX究极皮肤</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">魔幻</a>
+                                    <a href="javascript:;">moba</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">腾讯运营</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (19).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>穿越火线</h2>
+                                <p>2008-07-25 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">FPS</a>
+                                    <a href="javascript:;">丧尸生存</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">免费</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (20).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>逆战</h2>
+                                <p>2012-09-08 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">FPS</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">机甲</a>
+                                    <a href="javascript:;">腾讯运营</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (21).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>QQ飞车</h2>
+                                <p>2008-01-23 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">赛车竞速</a>
+                                    <a href="javascript:;">免费</a>
+                                    <a href="javascript:;">大型网游</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (22).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>使命召唤OL</h2>
+                                <p>2016-10-27 公测</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">FPS</a>
+                                    <a href="javascript:;">丧尸生存</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">免费</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (23).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>NBA2KOL2</h2>
+                                <p>2018-12-26 公测</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">篮球</a>
+                                    <a href="javascript:;">体育竞技</a>
+                                    <a href="javascript:;">多人联机</a>
+                                    <a href="javascript:;">大型网游</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (24).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>天涯明月刀</h2>
+                                <p>2016-07-01 公测</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">MMORPG</a>
+                                    <a href="javascript:;">免费</a>
+                                    <a href="javascript:;">大型网游</a>
+                                    <a href="javascript:;">武侠</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (25).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>NBA2K OL</h2>
+                                <p>2012-10-24 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">体育竞技</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">篮球</a>
+                                    <a href="javascript:;">免费</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (26).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>堡垒之夜</h2>
+                                <p>2019-10-15 第二篇章S1</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">射击</a>
+                                    <a href="javascript:;">生存</a>
+                                    <a href="javascript:;">沙盒游戏</a>
+                                    <a href="javascript:;">TPS</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">腾讯运营</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (27).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>剑灵</h2>
+                                <p>2014-08-08 公测</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">MMORPG</a>
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">动漫画风</a>
+                                    <a href="javascript:;">免费</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">
+                                腾讯运营
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (28).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>极品飞车ONLINE</h2>
+                                <p>2017-10-27 狂飙不限号</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">极品飞车OL</a>
+                                    <a href="javascript:;">电子竞技</a>
+                                    <a href="javascript:;">赛车竞速</a>
+                                    <a href="javascript:;">免费</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">
+                                腾讯运营
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="frm-cont-bd item">
+                <ul>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (30).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>轩辕剑柒</h2>
+                                <p></p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">剧情丰富</a>
+                                    <a href="javascript:;">中国文化</a>
+                                    <a href="javascript:;">国产</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (31).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>卡库远古封印</h2>
+                                <p>期待度 90.6%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">开放世界</a>
+                                    <a href="javascript:;">解谜</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto"></div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (32).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>霓虹深渊</h2>
+                                <p></p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作</a>
+                                    <a href="javascript:;">Roguelike</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">音乐动听</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (33).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>不思议的皇冠</h2>
+                                <p></p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">MMORPG</a>
+                                    <a href="javascript:;">策略</a>
+                                    <a href="javascript:;">类Rogue</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (34).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>沉浮</h2>
+                                <p>预计 2020-07 上线 期待度 99.0%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">沙盒游戏</a>
+                                    <a href="javascript:;">航海</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">画面优美</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待</div>
+                        </div>
+                    </li>
+
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (40).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>捣蛋大作战</h2>
+                                <p>预计 2020-04 上线 期待度 87.1%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">休闲游戏</a>
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">街机</a>
+                                    <a href="javascript:;">动漫画风</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto"></div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (35).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>永进</h2>
+                                <p>2020-06 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">潜行</a>
+                                    <a href="javascript:;">冒险</a>
+                                    <a href="javascript:;">解谜</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (36).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>星际角斗场</h2>
+                                <p>2020-06 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">科幻</a>
+                                    <a href="javascript:;">冷兵器</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待</div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (41).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>混沌银河</h2>
+                                <p>2020-05 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">回合制</a>
+                                    <a href="javascript:;">策略</a>
+                                    <a href="javascript:;">机甲</a>
+                                    <a href="javascript:;">太空</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">敬请期待</div>
+                        </div>
+                    </li>
+
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (38).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>砖块迷宫建造者</h2>
+                                <p>2020-04-16 上线 推荐率 97.0%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">休闲游戏</a>
+                                    <a href="javascript:;">解谜</a>
+                                    <a href="javascript:;">像素风格</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">
+                                ¥
+                                50
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (39).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>机动战士敢达Online</h2>
+                                <p>预计 2020-04-08 上线 期待度 87.7%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">机甲</a>
+                                    <a href="javascript:;">多人联机</a>
+                                    <a href="javascript:;">射击</a>
+                                    <a href="javascript:;">TPS</a>
+                                </div>
+                            </div>
+                            <div class="table-cell-auto">
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="frm-cont-bd item">
+                <ul>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (42).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>小三角大英雄</h2>
+                                <p>2017-05-04 上线 推荐率 92.6%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">横版过关</a>
+                                    <a href="javascript:;">休闲游戏</a>
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">国产</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>3.1折</span>
+                                <span>¥ 21</span>
+                                <span>¥ <del>68</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (43).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>避难2</h2>
+                                <p>2018-05-10 上线 推荐率 95.2%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">生存</a>
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>3.3折</span>
+                                <span>¥ 16</span>
+                                <span>¥ <del>48</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (44).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>避难</h2>
+                                <p>2018-05-10 上线 推荐率 81.7%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">生存</a>
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>3.2折</span>
+                                <span>¥ 11</span>
+                                <span>¥ <del>36</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (45).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>最后一站</h2>
+                                <p>2018-01-09 上线 推荐率 86.7%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">横版过关</a>
+                                    <a href="javascript:;">丧尸</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>4折</span>
+                                <span>¥ 19</span>
+                                <span>¥ <del>48</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (46).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>伪装游戏</h2>
+                                <p>2019-08-29 上线 推荐率 90.0%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">闯关</a>
+                                    <a href="javascript:;">解谜</a>
+                                    <a href="javascript:;">军事题材</a>
+                                    <a href="javascript:;">动漫画风</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>42折</span>
+                                <span>¥ 15</span>
+                                <span>¥ <del>36</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (47).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>孤山堡垒</h2>
+                                <p>2020-01-14 上线肤</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">沙盒游戏</a>
+                                    <a href="javascript:;">模拟经营</a>
+                                    <a href="javascript:;">休闲游戏</a>
+                                    <a href="javascript:;">策略</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>4.3折</span>
+                                <span>¥ 10</span>
+                                <span>¥ <del>23</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (48).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>影子里的我</h2>
+                                <p>2017-05-11 上线 推荐率 85.9%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">解谜</a>
+                                    <a href="javascript:;">冒险</a>
+                                    <a href="javascript:;">唯美画面</a>
+                                    <a href="javascript:;">横版过关</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>4.4折</span>
+                                <span>¥ 8</span>
+                                <span>¥ <del>18</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (49).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>手机帝国</h2>
+                                <p>2019-03-07 上线 推荐率 62.8%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">模拟经营</a>
+                                    <a href="javascript:;">单人</a>
+                                    <a href="javascript:;">经典回归</a>
+                                    <a href="javascript:;">国产</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>4.7折</span>
+                                <span>¥ 18</span>
+                                <span>¥ <del>38</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (50).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>风暴之海</h2>
+                                <p>2018-04-10 上线 推荐率 77.9%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">航海</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">海外引进</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>4.7折</span>
+                                <span>¥ 28</span>
+                                <span>¥ <del>59</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (51).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>海盗之城</h2>
+                                <p>2019-01-07 上线</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">动作冒险</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">航海</a>
+                                    <a href="javascript:;">魔幻</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>4.8折</span>
+                                <span>¥ 12</span>
+                                <span>¥ <del>25</del></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bsemaxd">
+                        <a class="figureAXAL" href="javascript:;"><img src="./upload/320 (52).jpg" alt=""></a>
+                        <div class="tui-table-box">
+                            <div class="table-cell">
+                                <h2>撕裂机甲</h2>
+                                <p>2019-02-28 上线 推荐率 95.1%</p>
+                                <div class="tui-label">
+                                    <a href="javascript:;">横版过关</a>
+                                    <a href="javascript:;">角色扮演</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                    <a href="javascript:;">独立游戏</a>
+                                </div>
+                            </div>
+                            <div style="
+                            padding-left: 60px;
+                        " class="table-cell-auto">
+                                <span>5折</span>
+                                <span>¥ 19</span>
+                                <span>¥ <del>38</del></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="frm-cont-fd">
+                <a href="javascript:;" class="btn-prevA"></a>
+                <a style="
+                background-color: rgba(255,202,40,.5);
+                border-color: #ffb300;
+                color: #3c3c3c;
+            " href="javascript:;" class="page-num">1</a>
+                <a href="javascript:;" class="page-num">2</a>
+                <a href="javascript:;" class="page-num">3</a>
+                <a href="javascript:;" class="page-num">4</a>
+                <a href="javascript:;" class="page-num">5</a>
+                <a href="javascript:;" class="page-num">6</a>
+                <a href="javascript:;" class="page-num">7</a>
+                <a href="javascript:;" class="page-num">8</a>
+                <a href="javascript:;" class="page-num">9</a>
+                <a href="javascript:;" class="page-num">10</a>
+                <span class="ellipsis">…</span>
+                <a href="javascript:;" class="page-num">35</a>
+                <a href="javascript:;" class="btnAFnext"></a>
+                <span class="page-go">
+                    到第
+                    <input type="text">
+                    页
+                </span>
+                <button class="btn-confirm">确定</button>
+            </div>
+        </div>
+        <div class="fr-main-sidebar">
+            <div class="hotTags">
+                <div class="panel-hd">热门标签</div>
+                <div class="panel-bd">
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>篮球</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>大型网游</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>单机</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>免费</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>电子竞技</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>功能游戏</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>赛车竞速</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>动作冒险</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>FPS</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>角色扮演</span></a>
+
+
+                    <div style="display: none;" id="YCXSCK">
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>横版过关</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>MMORPG</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>模拟经营</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>休闲游戏</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>体育竞技</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>军事题材</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>动漫画风</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>格斗游戏</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>科幻</span></a>
+                        <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>国产</span></a>
+                    </div>
+                </div>
+                <div class="panel-ft"><a id="ZKQB" href="javascript:;">
+                        展开全部
+                    </a>
+                    <a id="SQQB" href="javascript:;">
+                        收起
+                    </a></div>
+            </div>
+            <div class="hotTags">
+                <div class="panel-hd">应用特性</div>
+                <div class="panel-bd">
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>支持多人联机</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>支持控制器</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>支持模组</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>支持WG成就</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>支持云存档</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>支持退款</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>含内购项</span></a>
+                    <a class="panel-bd-SAJK" href="javascript:;"><input type="checkbox"><span>WG专属汉化</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="siteFooterWrap">
+        <div class="widget-linkgroup">
+            <div class="app-version">
+                <h2>下载客户端：</h2>
+                <div class="widget-link-bd">
+                    <ul>
+                        <li>
+                            <a class="app-pcduan"
+                                href="http://dldir1.qq.com/tgc/wegame/mini/repo/WeGameMiniLoader.std.2.03.03.2031.exe"
+                                target="_blank" rel="noopener noreferrer"><i class="PC-APP"></i>PC端
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="get-linkwidget">
+
+                <div class="app-version">
+                    <h2>官方渠道：</h2>
+                    <div style="
+                        width: 227px;
+                    " class="widget-link-bd">
+                        <ul>
+                            <li>
+                                <a class="app-pcduan" href="https://weibo.com/u/6068787464" target="_blank"
+                                    rel="noopener noreferrer"><i class="wB-app"></i>微博
+                                </a>
+                            </li>
+                            <li>
+                                <a class="app-pcduan" href="javascript:;" rel="noopener noreferrer"><i
+                                        class="wX-app"></i>微信
+                                    <span class="widget-link-rcode"> <img src="./imges/wechat-rcode.jpg" alt=""></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="t-linkwidget-lin">
+
+                <div class="app-version">
+                    <h2>友情链接：</h2>
+                    <div class="widget-link-bd" style="
+                        width: 180px;
+                    ">
+                        <ul>
+                            <li style="
+                                padding-bottom: 6px;
+                            ">
+                                <a style="
+                                    font-size: 14px;
+                                " class="app-pcduan" href="http://book.qq.com/" target="_blank"
+                                    rel="noopener noreferrer">QQ阅读
+                                </a> </li>
+
+                            <li style="
+                                padding-bottom: 6px;
+                            ">
+                                <a style="
+                                    font-size: 14px;
+                                " class="app-pcduan" href="https://gwb.tencent.com/cn" target="_blank"
+                                    rel="noopener noreferrer">腾讯GWB
+                                </a> </li>
+
+                            <li style="
+                                padding-bottom: 6px;
+                            ">
+                                <a style="
+                                    font-size: 14px;
+                                " class="app-pcduan" href="https://ac.qq.com/" target="_blank"
+                                    rel="noopener noreferrer">腾讯动漫
+                                </a> </li>
+
+                            <li style="
+                                padding-bottom: 6px;
+                            ">
+                                <a style="
+                                    font-size: 14px;
+                                " class="app-pcduan" href="https://v.qq.com/" target="_blank"
+                                    rel="noopener noreferrer">腾讯视频
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget-copyright">
+            <p> 关于腾讯 | About Tencent | 服务条款 | 用户服务协议 | 隐私政策 | 侵权通知 | 广告服务 | 腾讯招聘 | 客服中心 | 网站导航</p>
+            <p>COPYRIGHT © 1998 – 2020 TENCENT. ALL RIGHTS RESERVED.</p>
+            <p>腾讯公司 版权所有</p>
+        </div>
+    </div>
+
+    <!-- 侧边导航栏 -->
+    <div class="gsider">
+        <div class="gsider-group-gsid">
+            <div class="gsider-button-list">
+                <div id="GWC-TP" class="gs-button-appointment">
+                    <i> <svg style="
+                        width: 34px;
+                        height: 34px;
+                    ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" id="icon-svg-cart">
+                                <g transform="translate(-27 -1100)">
+                                    <path class="svg-cart"
+                                        d="M19.975,2.759a2.256,2.256,0,0,1-.067.409c-.038.105-.093.187-.137.285a17.058,17.058,0,0,1-3.3,6.25,1.192,1.192,0,0,1-.967.282,2.157,2.157,0,0,1-1.068-.371c-.278-.254-1.177-1.479-1.415-1.7-.2-.189-.4-.436-.711-.436-.257,0-.514.242-.712.418-.459.405-.8.978-1.347,1.246a1.723,1.723,0,0,1-.664.072C8.279,9.187,7.349,7.42,7,5.251a5.408,5.408,0,0,0,.217.5,5.923,5.923,0,0,0,.56.934,2.559,2.559,0,0,0,.83.684,1.036,1.036,0,0,0,1.133.147,1.945,1.945,0,0,0,.6-.569c.17-.239.563-.759.729-1,.3-.434.718-.969,1.259-.966a1.21,1.21,0,0,1,.988.459c.174.2,1.328,2.016,2.211,2.016.5,0,1.165-1.5,2-3.461.019-.043.041-.1.065-.165C17.734,3.254,17.592,3,17,3H6S5.794,1.011,7.147,1.011c2.863,0,10.208.016,10.43.016,1.076,0,2.5.255,2.419,1.605,0,.006.01.008.013.014C20,2.685,19.986,2.72,19.975,2.759ZM17,12c1.678,0,1.967,2.012,1.967,2.012H5.583c-.814,0-1.355.044-1.585-1.659C3.619,9.549,2.3,4.963,2,3c-.236-1.545-.294-1-1-1H0S-.151,0,.956,0H2c.745,0,1.7-.009,2,2,.391,2.595,2,10,2,10ZM5.5,16.007a1.5,1.5,0,1,1-1.492,1.5A1.495,1.495,0,0,1,5.5,16.007Zm11,0a1.5,1.5,0,1,1-1.492,1.5A1.5,1.5,0,0,1,16.5,16.008Z"
+                                        transform="translate(33.006 1109)" fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                        </svg> </i>
+                    <div class="tui-tips-middle-lef">
+                        购物车
+                    </div>
+                </div>
+            </div>
+            <div class="gsider-button-list">
+                <div id="HJ-TP" class="gs-button-appointment">
+                    <i> <svg style="
+                        width: 34px;
+                        height: 34px;
+                    ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" id="icon-svg-top">
+                                <g transform="translate(-27 -1100)">
+                                    <path class="svg-top"
+                                        d="M17,14c-.685,0-1.722-.931-2.437-1.547C13.679,15.008,11.526,16,9,16s-4.681-.994-5.564-3.552h0l-.376.328-.041.035c-.108.094-.22.189-.334.283l-.076.063c-.131.107-.265.211-.4.307l-.019.014q-.18.128-.357.231c-.037.022-.072.04-.109.059a2.358,2.358,0,0,1-.273.127c-.036.014-.073.03-.108.041A1.154,1.154,0,0,1,1,14c-.953,0-1,.028-1-1a1.348,1.348,0,0,1,.079-.389c.013-.041.029-.084.045-.128.046-.123.1-.254.172-.394.018-.038.033-.073.054-.113.091-.177.2-.365.317-.56.031-.052.065-.105.1-.157.1-.157.2-.316.31-.479L1.2,10.6c.143-.209.29-.418.443-.628l.036-.049c.148-.2.3-.4.447-.6l.113-.147c.148-.193.294-.381.436-.56l.021-.026c.165-.21.321-.4.466-.582h0C3.925,3.85,7.419,0,9,0s5.118,3.9,5.855,8.091C16.03,9.615,18,12.278,18,13,18,14.028,17.9,14,17,14ZM9,2.009c-.862,0-4.007,4.18-4.007,7.489S6.787,13.991,9,13.991s4.007-1.184,4.007-4.493S9.862,2.009,9,2.009ZM9,9a1,1,0,1,1,1-1A1,1,0,0,1,9,9ZM5,16a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0V17A1,1,0,0,1,5,16Zm4,1a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0V18A1,1,0,0,1,9,17Zm4-1a1,1,0,0,1,1,1v1a1,1,0,0,1-2,0V17A1,1,0,0,1,13,16Z"
+                                        transform="translate(35 1107)" fill-rule="evenodd"></path>
+                                </g>
+                            </svg>
+                        </svg> </i>
+                    <div class="tui-tips-middle-lef">
+                        返回顶部
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/suoyourenwu.js"></script>
+</body>
+
+</html>

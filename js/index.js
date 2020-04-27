@@ -498,21 +498,11 @@
       })
   });
 
-  //   if (HDtop >= RyugaoS && HDtop <= DDTJgm) {
-  //       $('#RDYG-dh').css({
-  //           "height": 52,
-  //           "background-color": "#ffca28",
-  //           "border-radius": 50
-  //       })
-  //   }else{
-  //     $('#RDYG-dh').css({
-  //         "height": 37,
-  //         "background-color": "none",
-  //         "border-radius": 0
-  //     })
-  //   }
 
   $('#GWC-TP').on('click', function () {
     $('.dlkzh').show();
     $('.zzc').show();
 })
+
+
+
