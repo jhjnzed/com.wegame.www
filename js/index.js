@@ -501,11 +501,11 @@
       $(document).scroll(function () {
           // 各楼层高度
           let HDtop = $(document).scrollTop();
-          let RyugaoS = $('#Ryugao').offset().top;
-          let PHBpbang = $('#PHB-pbang').offset().top;
-          let DDTJgm = $('#DDTJ-gm').offset().top;
-          let ZJGXuijg = $('#ZJGX-zuijg').offset().top;
-          let CSZQcsfw = $('#CSZQ-csfw').offset().top;
+          let RyugaoS = $('#Ryugao').offset().top-400;
+          let PHBpbang = $('#PHB-pbang').offset().top-400;
+          let DDTJgm = $('#DDTJ-gm').offset().top-400;
+          let ZJGXuijg = $('#ZJGX-zuijg').offset().top-400;
+          let CSZQcsfw = $('#CSZQ-csfw').offset().top-400;
           if (CSZQcsfw <= HDtop) {
               $('#RDYG-dh').removeClass('currentSKH')
               $('#PHB-TP').removeClass('currentSKH')
