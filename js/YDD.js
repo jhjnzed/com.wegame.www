@@ -93,11 +93,13 @@
   })
 
 
-  //   lol视频
-  $('#xssplol').on('click', function () {
-      $('.LOLNIUBI').show();
-      $('#xssplol').hide()
-  })
+
+
+
+
+
+
+
 
 
 
@@ -109,43 +111,41 @@
       $(document).scroll(function () {
           // 各楼层高度
           let HDtop = $(document).scrollTop();
-          let RyugaoS = $('.app-scene-1').offset().top - 80;
-          let PHBpbang = $('.app-scene-2').offset().top - 200;
-          let DDTJgm = $('.app-scene-3').offset().top - 400;
-          let ZJGXuijg = $('.app-scene-4').offset().top - 400;
-          let CSZQcsfw = $('.app-scene-5').offset().top - 200;
+          let RyugaoS = $('#D1BF').offset().top - 80;
+          let PHBpbang = $('#D2BF').offset().top - 200;
+          let DDTJgm = $('#D3BF').offset().top - 200;
+          let ZJGXuijg = $('#D4BF').offset().top - 200;
+          let CSZQcsfw = $('#D5BF').offset().top - 200;
           if (CSZQcsfw <= HDtop) {
-              $('.tui-fr-container-5').show();
+              $('#nhbzqo5').show();
               //   $('.tui-fr-container-3').hide();
               //   $('.tui-fr-container-2').hide();
               //   $('.tui-fr-container-1').hide();
               //   $('.tui-fr-container').hide();
           } else if (ZJGXuijg <= HDtop) {
               //   $('.tui-fr-container-5').hide();
-              $('.tui-fr-container-3').show();
-              $('.app-tieedasasg').show()
+              $('#nhbzqo4').show();
               //   $('.tui-fr-container-2').hide();
               //   $('.tui-fr-container-1').hide();
               //   $('.tui-fr-container').hide();
           } else if (DDTJgm <= HDtop) {
               //   $('.tui-fr-container-5').hide();
               //   $('.tui-fr-container-3').hide();
-              $('.tui-fr-container-2').show();
-              $('.app-tieedtjie').show()
+              $('#nhbzqo3').show();
               //   $('.tui-fr-container-1').hide();
               //   $('.tui-fr-container').hide();
           } else if (PHBpbang <= HDtop) {
               //   $('.tui-fr-container-5').hide();
               //   $('.tui-fr-container-3').hide();
               //   $('.tui-fr-container-2').hide();
-              $('.tui-fr-container-1').show();
+              $('#nhbzqo2').show();
               //   $('.tui-fr-container').hide();
           } else if (RyugaoS <= HDtop) {
               //   $('.tui-fr-container-5').hide();
               //   $('.tui-fr-container-3').hide();
               //   $('.tui-fr-container-2').hide();
               //   $('.tui-fr-container-1').hide();
-              $('.tui-fr-container').show();
+              $('#nhbzqo1').show();
           }
       })
   })
