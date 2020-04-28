@@ -1023,7 +1023,118 @@ body::after {
     padding-top: 0;
 }
 
+/* 游戏详情左边 */
+.youxixqzb {
+    width: 700px;
+    height: 1244px;
+    position: relative;
+}
 
+.youxag {
+    width: 100px;
+    height: 35px;
+    margin-bottom: 20px;
+    margin-top: 24px;
+    position: relative;
+}
+
+.youxag h2 {
+    font-size: 18px;
+    line-height: 27px;
+    color: #3c3c3c;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 300px;
+    height: 30px;
+    font-weight: 400;
+}
+
+.youxag h2::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    margin-left: 5px;
+    position: absolute;
+    right: -14px;
+    bottom: -5px;
+    border: 2px solid #ffb300;
+    border-top: 0;
+    border-left: 0;
+}
+
+.laslkghsgdhfd {
+    background-color: #fff;
+    border-radius: 3px;
+    position: relative;
+}
+
+.llfddfjkxcvjjx {
+    padding: 20px 30px;
+    max-height: 265px;
+    line-height: 1.8;
+    overflow: hidden;
+}
+
+.dgjkldhjkb {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 3px;
+    text-align: center;
+    color: #757575;
+    cursor: pointer;
+}
+
+.dgjkldhjkb::before {
+    content: "";
+    border-top: 1px solid #e2e2e2;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    right: 30px;
+}
+
+.dgjkldhjkb::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    top: -80px;
+    left: 30px;
+    right: 30px;
+    background: url(../upload/viewmore-bg.e1b5636d.png) repeat-x;
+    background-position: 0 100%;
+}
+
+.dgjkldhjkb span {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    height: 38px;
+    font-weight: 700;
+}
+
+.dgjkldhjkb:hover span {
+    color: #f69c00;
+}
+
+/* <!-- 运营阶段右边 --> */
+.yyjdyb {
+    position: absolute;
+    width: 280px;
+    height: 1038px;
+    left: 72%;
+    top: 486px;
+    display: inline-block;
+}
+
+.yyjdyb img {
+    width: 100%;
+}
 
 /* 导航栏 */
 .gsider {
