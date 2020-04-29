@@ -885,22 +885,252 @@ body::after {
 }
 
 .alkghjgajkg {
-    cursor: pointer;
     position: absolute;
-    bottom: 20px;
     left: 20px;
     right: 20px;
-    margin-top: 6px;
-    width: 260px;
-    height: 110px;
-    background-repeat: no-repeat;
-    opacity: 0.9;
-    background-image: url(../upload/Snipaste_2020-04-28_17-34-55.png);
+    margin-top: 38px;
 }
 
-.alkghjgajkg:hover {
-    opacity: 1;
+.alkghjgajkg h2 {
+    border: 1px solid rgba(246, 156, 0, .5);
+    border-radius: 2px;
+    background-color: #fff9e4;
+    padding: 5px 10px;
+    color: #757575;
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #f69c00;
+    font-weight: 700;
+    line-height: 21px;
+}
 
+.alkghjgajkg h2 span {
+    float: right;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: all .5 ease-in-out;
+}
+
+
+.agghghdfd {
+    position: absolute;
+    bottom: 104%;
+    left: 35%;
+    opacity: 0;
+}
+
+.alkghjgajkg h2 span:hover .agghghdfd {
+    opacity: 1 !important;
+}
+
+.fn-btn-info {
+    min-height: 26px;
+    color: #757575;
+    margin-bottom: 6px;
+}
+
+.fn-btn-info span {
+    font-weight: 700;
+    color: #fff;
+    background-color: #ff6f00;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 4px;
+    min-width: 50px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    padding: 0 6px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.fn-btn-info s {
+    color: #ff6f00;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    padding: 0 4px;
+}
+
+.fn-btn-info del {
+    display: inline-block;
+    vertical-align: middle;
+    height: 23px;
+    line-height: 23px;
+    color: #757575;
+    text-align: left;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.fn-btn-info i {
+    display: inline-block;
+    color: #757575;
+    margin-left: 10px;
+
+}
+
+.groupkdjs {
+    position: relative;
+    min-height: 48px;
+}
+
+.subgroreference {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 65px;
+    padding-right: 54px;
+}
+
+.fn-btbnby {
+    transition: background-color .2s ease-in, border-color .2s ease-in;
+    background: #ffca28;
+    cursor: pointer;
+    color: #000;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    font-size: 17px;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.fn-btbnby:hover {
+    background: #edbc25;
+    color: #000;
+}
+
+.fn-btgsgbnby {
+    width: 54px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #efb70c;
+    transition: background-color .2s ease-in;
+}
+
+.fn-btgsgbnby:hover {
+    background-color: #deaa0b;
+}
+
+.widget-btn-wp {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.kgerjgdfjhf {
+    font-size: 14px;
+    height: 48px;
+    line-height: 48px;
+    background: transparent;
+    display: inline-block;
+    color: #757575;
+    border: 1px solid transparent;
+    border-radius: 36px;
+    width: 65px;
+    min-width: 65px;
+    padding: 0;
+    text-align: right;
+}
+
+.widget-btn-wp:hover .kgerjgdfjhf {
+    color: #ff8f00;
+}
+
+.kgerjgdfjhf::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0 0;
+    background-image: url(../upload/ico-gift.d00a7973.png);
+}
+
+.widget-btn-wp:hover .kgerjgdfjhf::before {
+    background-position: 0 -16px;
+}
+
+.protocoas {
+    line-height: 21px;
+    color: #757575;
+    text-align: left;
+    padding-top: 9px;
+    max-height: 52px;
+    overflow: hidden;
+}
+
+.protocoas span {
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    width: 44px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+
+.dddfgfhgf {
+    position: absolute;
+    left: -18px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #bfbfbf;
+    vertical-align: -2px;
+    cursor: pointer;
+    margin-right: 0px;
+    background-repeat: no-repeat;
+    background-position: 1px 3px;
+    background-image: url(../imges/hherrthdf.png);
+}
+
+.fdhhfgh {
+    background-image: none !important;
+}
+
+.protocoas span:hover .dddfgfhgf {
+    border: 1px solid #3c3c3c !important;
+}
+
+.jtyhujbj {
+    color: #757575 !important;
+    cursor: default !important;
+    background: #e4e4e4 !important;
+}
+
+.jfkdhgdfgh {
+
+    cursor: default !important;
+    pointer-events: none !important;
+    color: #757575 !important;
+}
+
+.sdjkghsdjg {
+    pointer-events: none !important;
+}
+
+.protocoas a {
+    text-decoration: none;
+    color: #757575;
+    margin: 0 4px;
+    border-bottom: 1px dotted #757575;
+}
+
+.protocoas a:hover {
+    color: #f69c00;
+    text-decoration: none;
+    border-bottom: 1px dotted #f69c00;
 }
 
 .aklghajg {
@@ -1021,6 +1251,124 @@ body::after {
     display: block;
     margin: 0;
     padding-top: 0;
+}
+
+.dhgdffgdkjg {
+    width: 1000px;
+    height: 120px;
+    padding: 8px 0 8px 160px;
+    position: relative;
+    background-color: #f4f4f4;
+}
+
+.figurghkle {
+    height: 100%;
+    width: 160px;
+    overflow: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.figurghkle img {
+    width: 107px;
+    height: 62px;
+    border-radius: 2px;
+    position: absolute;
+    top: 28px;
+    left: 50%;
+    margin: 0 0 0 -60px;
+    z-index: 5;
+}
+
+.figurghkle::before {
+    left: 23px;
+    top: 24px;
+    z-index: 2;
+    content: "";
+    width: 107px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    position: absolute;
+}
+
+.figurghkle::after {
+    content: "";
+    width: 107px;
+    height: 60px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    position: absolute;
+    left: 27px;
+    top: 20px;
+    z-index: 1;
+}
+
+.gfhgjhdfhg {
+    display: table;
+    width: 100%;
+    height: auto;
+    min-height: 102px;
+    position: relative;
+    table-layout: fixed;
+}
+
+.fklghdfgughd {
+    width: 470px;
+    height: 102px;
+    vertical-align: middle;
+}
+
+.fklghdfgughd h2 {
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-top: 4px;
+    color: #3c3c3c;
+    font-size: 15px;
+}
+
+.fklghdfgughd p {
+    color: #757575;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.shfhdfhh {
+    vertical-align: middle;
+    padding-top: 0;
+    width: 330px;
+    text-align: right;
+    display: table-cell;
+    min-height: 104px;
+    height: 102px;
+    padding-right: 20px;
+}
+
+.shfhdfhh span {
+    text-align: center;
+    min-width: 120px;
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    background-color: #ffca28;
+    color: #000;
+    font-weight: 700;
+    transition: all .2s linear;
+    border-radius: 2px;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.shfhdfhh span:hover {
+    background: rgba(255, 202, 40, .5);
+
 }
 
 /* 游戏详情左边 */
@@ -1579,7 +1927,7 @@ body::after {
     width: 280px;
     height: 1038px;
     left: 72%;
-    top: 486px;
+    top: 630px;
     display: inline-block;
 }
 

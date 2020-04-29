@@ -153,3 +153,40 @@
           onOff = 1;
       }
   })
+
+
+  $('.groupkdjs').on('click', function () {
+      $('.dlkzh').show();
+      $('.zzc').show()
+  })
+  $('.shfhdfhh').on('click', function () {
+      $('.dlkzh').show();
+      $('.zzc').show()
+  })
+  $('.sfgfgsdds').on('click', function () {
+      $('.dlkzh').show();
+      $('.zzc').show()
+  })
+
+  $('#fghfbf').on('click', function () {
+      $('.dlkzh').show();
+      $('.zzc').show()
+  })
+  $(' #ghjkgj').on('click', function () {
+      $('#ghjkgj').hide()
+      $('.fdhhfgh').show()
+      $('.groupkdjs').addClass("sdjkghsdjg")
+      $('.subgroreference a').addClass('jtyhujbj')
+      $(".kgerjgdfjhf").addClass('jfkdhgdfgh')
+      $('.shfhdfhh ').addClass("sdjkghsdjg")
+      $('.shfhdfhh span').addClass("jtyhujbj")
+  })
+  $(' .fdhhfgh').on('click', function () {
+      $('#ghjkgj').show()
+      $('.fdhhfgh').hide()
+      $('.subgroreference a').removeClass('jtyhujbj')
+      $(".kgerjgdfjhf").removeClass('jfkdhgdfgh')
+      $('.groupkdjs').removeClass("sdjkghsdjg")
+      $('.shfhdfhh').removeClass("sdjkghsdjg")
+      $('.shfhdfhh span').removeClass("jtyhujbj")
+  })
