@@ -214,18 +214,30 @@
 
 
   //   关注点击事件
-  $('.widget-gcard-infobtn-gs').on('click', function () {
-      $('.widget-gcard-infobtn-gs-ygz').show();
-      $('.widget-gcard-infobtn-gs-gz').hide();
-  })
-  $('.widget-gcard-infobtn-gs').on('dblclick', function () {
-      $('.widget-gcard-infobtn-gs-ygz').hide();
-      $('.widget-gcard-infobtn-gs-gz').show();
-  })
-  $('#shipin-ts').on('click', function () {
-      $('#shipin-ts').hide()
-  })
+  //   $('.widget-gcard-infobtn-gs').on('click', function () {
+  //       $('.widget-gcard-infobtn-gs-ygz').show();
+  //       $('.widget-gcard-infobtn-gs-gz').hide();
+  //   })
+  //   $('.widget-gcard-infobtn-gs').on('dblclick', function () {
+  //       $('.widget-gcard-infobtn-gs-ygz').hide();
+  //       $('.widget-gcard-infobtn-gs-gz').show();
+  //   })
+  //   $('#shipin-ts').on('click', function () {
+  //       $('#shipin-ts').hide()
+  //   })
 
+
+
+  var onOff = 1;
+  $(".widget-gcard-infobtn-gs").on('click', function () {
+      if (onOff == 1) {
+          $('.widget-gcard-infobtn-gs-gz').text("已关注");
+          onOff = 0;
+      } else {
+          $('.widget-gcard-infobtn-gs-gz').text(" 关注 ");
+          onOff = 1;
+      }
+  })
 
 
 
@@ -501,11 +513,11 @@
       $(document).scroll(function () {
           // 各楼层高度
           let HDtop = $(document).scrollTop();
-          let RyugaoS = $('#Ryugao').offset().top-400;
-          let PHBpbang = $('#PHB-pbang').offset().top-400;
-          let DDTJgm = $('#DDTJ-gm').offset().top-400;
-          let ZJGXuijg = $('#ZJGX-zuijg').offset().top-400;
-          let CSZQcsfw = $('#CSZQ-csfw').offset().top-400;
+          let RyugaoS = $('#Ryugao').offset().top - 400;
+          let PHBpbang = $('#PHB-pbang').offset().top - 400;
+          let DDTJgm = $('#DDTJ-gm').offset().top - 400;
+          let ZJGXuijg = $('#ZJGX-zuijg').offset().top - 400;
+          let CSZQcsfw = $('#CSZQ-csfw').offset().top - 400;
           if (CSZQcsfw <= HDtop) {
               $('#RDYG-dh').removeClass('currentSKH')
               $('#PHB-TP').removeClass('currentSKH')
@@ -538,8 +550,8 @@
               $('#TGP-TP').removeClass('currentSKH')
               $('.gsider').show()
           } else {
-            $('.gsider').hide()
-        }
+              $('.gsider').hide()
+          }
       })
   })
 

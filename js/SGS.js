@@ -131,3 +131,24 @@
       }
       $('.aklghajg li').eq(index).fadeIn(500).siblings('li').fadeOut(500)
   })
+
+
+
+
+
+  var onOff = 1;
+  $(".dgjkldhjkb").on('click', function () {
+      if (onOff == 1) {
+          $('.dgjkldhjkb span').text("收起");
+          $('.llfddfjkxcvjjx').css({
+              "max-height": "none"
+          })
+          onOff = 0;
+      } else {
+          $('.dgjkldhjkb span').text(" 展开全部 v");
+          $('.llfddfjkxcvjjx').css({
+              "max-height": 265
+          })
+          onOff = 1;
+      }
+  })
