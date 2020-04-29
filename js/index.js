@@ -196,7 +196,7 @@
   }, 2000)
 
   //  移动到dlbnbys上面定时器删除
-  $('.dlbnbys')
+  $('.bjsgd')
       .on('mouseenter', function () {
           // 移除定时器
           clearInterval(timer)
@@ -222,9 +222,9 @@
   //       $('.widget-gcard-infobtn-gs-ygz').hide();
   //       $('.widget-gcard-infobtn-gs-gz').show();
   //   })
-  //   $('#shipin-ts').on('click', function () {
-  //       $('#shipin-ts').hide()
-  //   })
+  $('#shipin-ts').on('click', function () {
+      $('#shipin-ts').hide()
+  })
 
 
 
