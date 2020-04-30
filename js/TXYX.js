@@ -184,3 +184,43 @@ $('#jjjhhh').on('click', function () {
     $('#hhhjjj').removeClass('yasnhi');
     $('#jjjhhh').addClass("yasnhi");
 })
+
+
+
+
+
+
+
+
+
+
+//   整个界面的动画效果
+
+$(function () {
+    // 滚动事件
+    $(document).scroll(function () {
+        // 各楼层高度
+        let HDtop = $(document).scrollTop();
+        let PHBpbang = $('#k2').offset().top - 200;
+        let DDTJgm = $('#k3').offset().top - 200;
+        let ZJGXuijg = $('#k4').offset().top - 200;
+        let CSZQcsfw = $('#k5').offset().top - 200;
+        if (CSZQcsfw <= HDtop) {
+            $('#ko3').show();
+            $('#ko2').show();
+            $('#ko1').show();
+        } else if (ZJGXuijg <= HDtop) {
+            $('#kp1').show();
+            $('#kp2').show();
+            $('#kp3').show();
+        } else if (DDTJgm <= HDtop) {
+            $('#kl2').show();
+            $('#kl1').show();
+            $('#kl3').show();
+        } else if (PHBpbang <= HDtop) {
+            $('#kk2').show();
+            $('#kk3').show();
+            $('#kk1').show();
+        }
+    })
+})

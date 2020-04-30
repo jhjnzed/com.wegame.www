@@ -571,3 +571,23 @@
       $('.dlkzh').show();
       $('.zzc').show();
   })
+
+
+
+
+  //   FPX终极皮肤
+  $('.chuxianjiantou').on("click", function () {
+      $(".zhihouyoujih").hide();
+      $(".chuxianfpx").css("opacity", 1);
+      $(".niubifpx").css("height", 130);
+      $(".chuxianjiantou1").show()
+      $('.chuxianjiantou').hide()
+  })
+
+  $('.chuxianjiantou1').on("click", function () {
+      $(".zhihouyoujih").show();
+      $(".chuxianfpx").css("opacity", 0);
+      $(".niubifpx").css("height", 568);
+      $(".chuxianjiantou").show()
+      $('.chuxianjiantou1').hide()
+  })
