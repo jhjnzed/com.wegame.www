@@ -1,0 +1,467 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 600%;
+    position: relative;
+    margin: 0 auto;
+    font: 12px/1.5 Helvetica, Arial, sans-serif;
+}
+
+
+.main-headrmn-side {
+    padding-right: 100px;
+    padding: 10px 100px 0 360px;
+    height: 90px;
+    line-height: 80px;
+    font-size: 16px;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-width: 1000px;
+    z-index: 1000;
+}
+
+.logo-link {
+    position: absolute;
+    left: 110px;
+    top: 10px;
+}
+
+.logo-link img {
+    display: block;
+    width: 161px;
+    height: 80px;
+}
+
+.nav-box {
+    overflow: hidden;
+    position: relative;
+    height: 80px;
+}
+
+.nav-bar {
+    transform: translateX(0);
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .5s ease-in-out;
+    width: 520px;
+}
+
+.nav-bar a {
+    display: inline-block;
+    margin: 0 24px;
+    color: #fff;
+    position: relative;
+    opacity: .7;
+}
+
+/* 第一 */
+.ndklhfdk {
+    width: 1680px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-image: url(../upload/v_back.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.hongsebj {
+    display: none;
+}
+
+.hongsebj img {
+    animation: .3s scaleIn ease-in-out;
+    transform-origin: 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2560px;
+    height: 1020px;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.jdfgdfgb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    background-size: auto 100%;
+    background-image: url(../upload/figure_1.png);
+}
+
+.qufaxian {
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    transform: none !important;
+    position: absolute;
+    color: #fff;
+    animation: .5s slideUp ease-in-out;
+    left: 110px;
+    right: 110px;
+}
+
+.qufaxian h3 {
+    width: 724px;
+    height: 203px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transform: translateY(-30px);
+    background-image: url(../upload/title_1.png);
+    font-size: 0;
+}
+
+.qufaxian p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 28vh;
+    opacity: .65;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.qufaxian div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 44vh;
+    text-align: center;
+}
+
+.dash {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.yasnhi {
+    width: 36px;
+    background-color: #fff;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(1.05) translate(-50%, -50%);
+    }
+
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        margin-top: 100px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+/* 第二屏 */
+
+.dierpinakg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    background-size: auto 100%;
+    animation: 0.9s scaleIn2 cubic-bezier(0, 0.34, 0, 1.39);
+    transform-origin: 100% 50%;
+    background-image: url(../upload/picture_2.png);
+    background-repeat: no-repeat;
+}
+
+.gsgsdggd {
+    animation: .3s scaleIn ease-in-out;
+    transform-origin: 50% 50%;
+    position: absolute;
+    top: 54.3%;
+    left: 50%;
+    width: 2560px;
+    height: 1020px;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.hfghfgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    background-size: auto 100%;
+    background-image: url(../upload/figure_2.png);
+}
+
+.dfhfhdh {
+    position: absolute;
+    color: #fff;
+    animation: .5s slideUp ease-in-out;
+    top: 50%;
+    left: 110px;
+    right: 110px;
+    transform: translate(0, -50%) scale(0.8);
+}
+
+.dfhfhdh h1 {
+    width: 537px;
+    height: 259px;
+    background-image: url(../upload/title_2.png);
+}
+
+.sdgsgsdg {
+    opacity: .5;
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 50px;
+}
+
+.fhdfhsd {
+    margin-top: 150px;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.fhdfhsd a {
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding-right: 35px;
+    margin-right: 70px;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+}
+
+.fhdfhsd a:hover {
+    color: #fff;
+    transform: translateY(-10px);
+}
+
+.fhdfhsd a::after {
+    content: '';
+    width: 15px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../imges//arrow.png);
+}
+
+.jkfghgkjh {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    background-size: auto 100%;
+    animation: 0.9s scaleIn2 cubic-bezier(0, 0.34, 0, 1.39);
+    transform-origin: 100% 50%;
+    background-image: url(../upload/picture_3.png);
+    background-repeat: no-repeat;
+}
+
+.jfghhjd {
+    animation: .3s scaleIn ease-in-out;
+    transform-origin: 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2560px;
+    height: 1020px;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.dfghdfg {
+    background-image: url(../upload/title_3.png) !important;
+    background-repeat: no-repeat;
+}
+
+.sdgsdgdg {
+    background-image: url(../upload/picture_4.png ) !important;
+}
+
+.cdgdfgdf {
+    background-image: url(../upload/figure_4.png ) !important;
+
+}
+
+.fgfdhfggbn {
+    background-image: url(../upload/title_4.png ) !important;
+    width: 648px !important;
+}
+
+.vjkfdfvv {
+    background-image: url(../upload/picture_5.png ) !important;
+
+}
+
+.fgjgjfg {
+    background-image: url(../upload/figure_5.png ) !important;
+
+}
+
+.gjfgjfgg {
+    background-image: url(../upload/title_5.png ) !important;
+    width: 672px !important;
+}
+
+.kljfgds {
+    animation: .3s scaleIn ease-in-out;
+    transform-origin: 50% 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2560px;
+    height: 1020px;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.klgdfgfdg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top right;
+    background-size: auto 100%;
+    background-image: url(../upload/figure_6.png);
+}
+
+.ghjghjghjjgh {
+    width: 1420px;
+    margin: -155px auto 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.fdhfghfghfghf {
+    background-position: center top;
+    z-index: 88;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../upload/footer_bg.png);
+    background: url(../upload/footer-bg.png) no-repeat;
+}
+
+.ksdjgklsdlkghsdjklgh {
+    width: 100%;
+    min-width: 1280px;
+    position: relative;
+    z-index: 2;
+    height: 310px;
+}
+
+.oonnxcjf {
+    margin: 0 auto;
+    padding-top: 56px;
+    position: relative;
+    width: 1420px;
+}
+
+.left-tlist {
+    width: 100%;
+    height: 182px;
+}
+
+.right-tcgame {
+    width: 197px;
+    height: 27px;
+    position: absolute;
+    top: 107px;
+    right: 0;
+}
+
+.ghfghfgh {
+    color: rgba(255, 255, 255, 0.35);
+    font: 12px/20px "微软雅黑", "宋体";
+    min-width: 960px;
+    margin: 0 auto;
+    text-align: left;
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 12px;
+    width: 100%;
+}
+
+.ghjhgjg {
+    width: 164px;
+    height: auto;
+    float: left;
+}
+
+.dfhdhd {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 22px;
+    line-height: 22px;
+    position: relative;
+}
+
+.sdgsdgsdg {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.35);
+    line-height: 22px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.sdgsdgsdg i {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(../imges/spr.png) no-repeat;
+    vertical-align: top;
+    margin-right: 6px;
+    opacity: .35;
+    background-position: -4px -66px;
+}
+.dgdfg{
+    background-position: -4px -100px !important;
+    
+}
